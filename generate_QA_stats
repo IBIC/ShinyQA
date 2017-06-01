@@ -160,7 +160,7 @@ do (
 	echo -n "${TASK}_total_outliers,$total_outliers," >> $OUTPUTFILE
 	echo $percent_outliers'>'$percent_outliers_cutoff | bc -l >> $OUTPUTFILE
 	echo -n "${TASK}_num_vols,$num_vols," >> $OUTPUTFILE
-	if [ "$num_vols" -eq "$num_vols_cutoff" ]; then
+	if [ "$num_vols" == "$num_vols_cutoff" ]; then
 		echo 0 >> $OUTPUTFILE
 	else
 		echo 1 >> $OUTPUTFILE
