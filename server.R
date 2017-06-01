@@ -50,19 +50,16 @@ function(input, output, session) {
   
   # generate output for flagged subjects tab
   output$most_warnings <- renderUI({
-    # WRITE -> viewing flagged subjects for "session1"
-    #file_path <- "/mnt/panuc/udallp2/all_subjects"
-    #conn <- file(file_path)
-    #subjects <- readLines(conn)
-    #on.exit(close(conn))  
-    # QA_stats dataframe 
-    filename <- paste("/mnt/panuc/udallp2/subjects/", input$subid, "/", input$sessionid,
-                      "/QA/", input$subid, "_QA_stats.csv", sep = "")
-    QA_stats <- read.csv(filename, header = TRUE)
-    subjects <- c("100023", "100044", "100054", "100089", "100157", "100165", "110213")
+    file_path <- "/mnt/panuc/udallp2/all_subjects"
+    conn <- file(file_path)
+    subjects <- readLines(conn)
+    on.exit(close(conn))
     str <- c()
     i <- 1
     for (subject in subjects) {
+      filename <- paste("/mnt/panuc/udallp2/subjects/", subject, "/", input$sessionid,
+                        "/QA/", subject, "_QA_stats.csv", sep = "")
+      QA_stats <- read.csv(filename, header = TRUE)
       flagged_indices <- which(QA_stats$flag == TRUE)
       warnings <- paste(QA_stats[flagged_indices, "measure"], collapse = ", ")
       if (warnings != "") {
