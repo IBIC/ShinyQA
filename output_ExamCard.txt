@@ -1,0 +1,43 @@
+ME_RS_10min Off
+slices=37
+Echoes=3
+dyn scans=240
+FOV          RL (mm)=224
+Voxel size   RL (mm)=3.5
+Slice thickness (mm)=3.5
+slice orientation=transverse
+TR= 2500
+TE= 9.5
+
+ME_Task_10min Off
+slices=37
+Echoes=3
+dyn scans=240
+FOV          RL (mm)=224
+Voxel size   RL (mm)=3.5
+Slice thickness (mm)=3.5
+slice orientation=transverse
+TR= 2500
+TE= 9.5
+
+ME_RS_10min On
+slices=37
+Echoes=3
+dyn scans=240
+FOV          RL (mm)=224
+Voxel size   RL (mm)=3.5
+Slice thickness (mm)=3.5
+slice orientation=transverse
+TR= 2500
+TE= 9.5
+
+ME_Task_10min On
+slices=37
+Echoes=3
+dyn scans=240
+FOV          RL (mm)=224
+Voxel size   RL (mm)=3.5
+Slice thickness (mm)=3.5
+slice orientation=transverse
+TR= 2500
+TE= 9.5

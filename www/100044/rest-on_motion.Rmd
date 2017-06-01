@@ -1,0 +1,53 @@
+---
+title:
+runtime: shiny
+output: html_document
+keep_md: yes
+---
+
+**Absolute & Relative Displacement**
+```{r engine='bash', echo=FALSE}
+val1=`cat quantmeasures/rest-on_data_abs_mean.rms`
+echo "Mean Absolute Displacement : $val1 mm" 
+val2=`cat quantmeasures/rest-on_data_rel_mean.rms`
+echo "Mean Relative Displacement : $val2 mm"
+```
+
+**List of All Outlier Volumes (e002)**
+```{r engine='bash', echo=FALSE}
+cat quantmeasures/rest-on_e002_outliers_volumes.txt
+```
+
+**Percentage of Motion (FD, DVARS & SN) Outlier Volumes**
+```{r engine='bash', echo=FALSE}
+num_outliers=`cat quantmeasures/rest-on_all_outliers.txt | wc -l`
+num_volumes=`fslval quantmeasures/rest-on_e002.nii.gz dim4`
+percent_outliers=`echo ${num_outliers} ${num_volumes}|awk '{printf "%3.2f", $1/$2}'`
+echo "${percent_outliers}%"
+```
+**FD Volume Outliers for e002**
+```{r engine='bash', echo=FALSE}
+cat quantmeasures/rest-on_e002_fd_spike_vols
+```
+**FD Volume Outliers for Optimally Combined Time Series**
+```{r engine='bash', echo=FALSE}
+cat quantmeasures/rest-on_e00213_tsoc_fd_spike_vols
+```
+**FD Volume outliers for Denoised Time Series**
+```{r engine='bash', echo=FALSE}
+cat quantmeasures/rest-on_e00213_medn_fd_spike_vols
+```
+
+**DVARS Volume Outliers for e002**
+```{r engine='bash', echo=FALSE}
+cat quantmeasures/rest-on_e002_dvars_spike_vols
+```
+**DVARS Volume Outliers for Optimally Combined Time Series**
+```{r engine='bash', echo=FALSE}
+cat quantmeasures/rest-on_e00213_tsoc_dvars_spike_vols
+```
+**DVARS Volume Outliers for Denoised Time Series**
+```{r engine='bash', echo=FALSE}
+cat quantmeasures/rest-on_e00213_medn_dvars_spike_vols
+```
+

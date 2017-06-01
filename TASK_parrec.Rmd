@@ -1,0 +1,24 @@
+---
+title:
+runtime: shiny
+output: html_document
+keep_md: no
+---
+  
+```{r engine='bash', echo=FALSE}
+ID=`grep -e 'Patient name' PROJECTDIR/subjects/SUBID/sessionNO/parrec/TASK.PAR | awk '{print $5}'`
+VOL=`grep -e 'Max. number of dynamics' PROJECTDIR/subjects/SUBID/sessionNO/parrec/TASK.PAR |  awk '{print $7}'`
+TR=`grep -e 'Repetition time' PROJECTDIR/subjects/SUBID/sessionNO/parrec/TASK.PAR | awk '{print $6}'`
+TE=`tail -3 PROJECTDIR/subjects/SUBID/sessionNO/parrec/TASK.PAR | head -1 | awk {'print $31'}`
+DIR=`grep -e 'Preparation direction' PROJECTDIR/subjects/SUBID/sessionNO/parrec/TASK.PAR | awk {'print $5'}`
+FOV=`grep -e 'FOV' PROJECTDIR/subjects/SUBID/sessionNO/parrec/TASK.PAR | awk {'print $6'}`
+PixelSpacingX=`tail -3 PROJECTDIR/subjects/SUBID/sessionNO/parrec/TASK.PAR | head -1 | awk {'print $29'}`
+PixelSpacingY=`tail -3 PROJECTDIR/subjects/SUBID/sessionNO/parrec/TASK.PAR | head -1 | awk {'print $30'}`
+echo "Subject ID                 :  $ID"
+echo "No. of Volumes             :  $VOL"
+echo "Repetition Time            :  $TR"
+echo "Echo Time                  :  $TE"
+echo "Preperation Direction      :  $DIR"
+echo "FOV                        :  $FOV"
+echo "Pixel Spacing (x,y in mm)  :  $PixelSpacingX x $PixelSpacingY"
+```

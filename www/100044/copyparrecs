@@ -1,0 +1,5 @@
+cp /mnt/panuc/udallp2/subjects/100044/session1/parrec/*ME_Task*Off*.PAR axcpt-off.PAR
+cp /mnt/panuc/udallp2/subjects/100044/session1/parrec/*ME_Task*On*.PAR axcpt-on.PAR
+cp /mnt/panuc/udallp2/subjects/100044/session1/parrec/*ME_RS*Off*.PAR rest-off.PAR
+cp /mnt/panuc/udallp2/subjects/100044/session1/parrec/*ME_RS*On*.PAR rest-on.PAR
+cd /mnt/panuc/udallp2; for s in `cat all_subjects`; do echo $s; echo; cd /mnt/panuc/udallp2/subjects/$s/session1; cp parrec/*ME_RS*Off*.PAR parrec/rest-off.PAR; done

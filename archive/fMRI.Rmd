@@ -1,0 +1,191 @@
+---
+title: Quality Assurance of TASK Preprocessing for fMRI for ID SUBJECT
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    force_captions: TRUE
+---
+
+##PARAMETERS
+
+###Raw Data Parameters (from PAR)
+
+```{r engine='bash', echo=FALSE}
+  grep -e 'Patient name' ../parrec/*PARREC*PAR
+  grep -e 'Max. number of dynamics' ../parrec/*PARREC*PAR
+  grep -e 'Repetition time' ../parrec/*PARREC*PAR
+  EchoTime=`tail -3 ../parrec/*PARREC*PAR | head -1 | awk {'print $31'}`
+  echo ".    Echo Time                          :   $EchoTime"
+  grep -e 'Preparation direction' ../parrec/*PARREC*PAR
+  grep -e 'FOV' ../parrec/*PARREC*PAR
+  PixelSpacingX=`tail -3 ../parrec/*PARREC*PAR | head -1 | awk {'print $29'}`
+  PixelSpacingY=`tail -3 ../parrec/*PARREC*PAR | head -1 | awk {'print $30'}`
+  echo ".    Pixel Spacing (x,y in mm)          :   $PixelSpacingX x $PixelSpacingY"
+```
+
+##RAW DATA QUALITY
+
+###Raw Data Movie
+#### Echo 1
+<img src="images/TASK_e001_x_animation.gif" width="400px" />
+<img src="images/TASK_e001_y_animation.gif" width="400px" />
+<img src="images/TASK_e001_z_animation.gif" width="250px" />
+
+#### Echo 2
+<img src="images/TASK_e002_x_animation.gif" width="400px" />
+<img src="images/TASK_e002_y_animation.gif" width="400px" />
+<img src="images/TASK_e002_z_animation.gif" width="250px" />
+
+#### Echo 3
+<img src="images/TASK_e003_x_animation.gif" width="400px" />
+<img src="images/TASK_e003_y_animation.gif" width="400px" />
+<img src="images/TASK_e003_z_animation.gif" width="250px" />
+
+###Time Series Difference Analysis
+
+<img src="images/TASK_e001_tsdiffana.gif" width="600px" />
+<img src="images/TASK_e002_tsdiffana.gif" width="600px" />
+<img src="images/TASK_e003_tsdiffana.gif" width="600px" />
+
+###Temporal Signal-to-Noise Ratio
+
+###Temporal Mean
+
+<img src="images/TASK_e001_tsnr_mean_x.gif" width="400px" />
+<img src="images/TASK_e001_tsnr_mean_y.gif" width="400px" />
+<img src="images/TASK_e001_tsnr_mean_z.gif" width="300px" />
+<img src="images/TASK_e002_tsnr_mean_x.gif" width="400px" />
+<img src="images/TASK_e002_tsnr_mean_y.gif" width="400px" />
+<img src="images/TASK_e002_tsnr_mean_z.gif" width="300px" />
+<img src="images/TASK_e003_tsnr_mean_x.gif" width="350px" />
+<img src="images/TASK_e003_tsnr_mean_y.gif" width="350px" />
+<img src="images/TASK_e003_tsnr_mean_z.gif" width="300px" />
+
+###Temporal Standard Deviation
+
+<img src="images/TASK_e001_tsnr_stddev_x.gif" width="400px" />
+<img src="images/TASK_e001_tsnr_stddev_y.gif" width="400px" />
+<img src="images/TASK_e001_tsnr_stddev_z.gif" width="400px" />
+<img src="images/TASK_e002_tsnr_stddev_x.gif" width="400px" />
+<img src="images/TASK_e002_tsnr_stddev_y.gif" width="350px" />
+<img src="images/TASK_e002_tsnr_stddev_z.gif" width="300px" />
+<img src="images/TASK_e003_tsnr_stddev_x.gif" width="350px" />
+<img src="images/TASK_e003_tsnr_stddev_y.gif" width="350px" />
+<img src="images/TASK_e003_tsnr_stddev_z.gif" width="300px" />
+
+###Temporal Signal-to-Noise
+
+<img src="images/TASK_e001_tsnr_x.gif" width="350px" />
+<img src="images/TASK_e001_tsnr_y.gif" width="350px" />
+<img src="images/TASK_e001_tsnr_z.gif" width="300px" />
+<img src="images/TASK_e002_tsnr_x.gif" width="350px" />
+<img src="images/TASK_e002_tsnr_y.gif" width="350px" />
+<img src="images/TASK_e002_tsnr_z.gif" width="300px" />
+<img src="images/TASK_e003_tsnr_x.gif" width="350px" />
+<img src="images/TASK_e003_tsnr_y.gif" width="350px" />
+<img src="images/TASK_e003_tsnr_z.gif" width="300px" />
+
+###MEICA Output for Denoised Data (medn & mefc) and Optimally Combined Data (tsoc)
+
+####tsoc
+<img src="images/TASK_e00213_tsoc_x_animation.gif" width="300px" />
+<img src="images/TASK_e00213_tsoc_y_animation.gif" width="300px" />
+<img src="images/TASK_e00213_tsoc_z_animation.gif" width="300px" />
+
+####medn
+<img src="images/TASK_e00213_medn_x_animation.gif" width="300px" />
+<img src="images/TASK_e00213_medn_y_animation.gif" width="300px" />
+<img src="images/TASK_e00213_medn_z_animation.gif" width="300px" />
+
+####mefc
+<img src="images/TASK_e00213_mefc_x_animation.gif" width="300px" />
+<img src="images/TASK_e00213_mefc_y_animation.gif" width="300px" />
+<img src="images/TASK_e00213_mefc_z_animation.gif" width="300px" />
+
+##MOTION
+
+###Motion Statistics
+```{r engine='bash', echo=FALSE}
+val=`cat mcflirt_data/TASK_data_abs_mean.rms`
+echo "Mean Absolute Displacement : $val mm" 
+val=`cat mcflirt_data/TASK_data_rel_mean.rms`
+echo "Mean Relative Displacement : $val mm"
+
+```
+
+###Rotations / Translations
+(X = Blue; Y = Golden; Z = Green)
+
+<img src="images/TASK_e002_MotionGraphRotations.gif" width="400px" />
+<img src="images/TASK_e002_MotionGraphTranslations.gif" width="400px" />
+
+###Motion Outlier Volumes
+
+List of All Outliers (e002)
+```{r engine='bash', echo=FALSE}
+cat ../TASK/TASK_e002_outliers_volumes.txt
+```
+
+###Percentage of Motion Outlier Volumes
+```{r engine='bash', echo=FALSE}
+num_outliers=`cat ../TASK/SUBJECT_all_outliers.txt | wc -l`
+num_volumes=`fslval ../TASK/TASK_e002.nii.gz dim4`
+percent_outliers=`echo ${num_outliers} ${num_volumes}|awk '{printf "%3.2f", $1/$2}'`
+echo "${percent_outliers}%"
+```
+
+###Framewise Displacement (FD)
+Represents instantaneous head motion
+
+<img src="QA/images/TASK_e002_FramewiseDisplacement.gif" width="400px" />
+
+Displacement Outliers for e002
+```{r engine='bash', echo=FALSE}
+cat ../TASK/TASK_e002_fd_spike_vols
+```
+Displacement Outliers for Optimally Combined Time Series 
+```{r engine='bash', echo=FALSE}
+cat ../TASK/TASK_e00213_tsoc_fd_spike_vols
+```
+Displacement Outliers for Denoised Time Series
+```{r engine='bash', echo=FALSE}
+cat ../TASK/TASK_e00213_medn_fd_spike_vols
+```
+
+###Variance in Signal Intensity (DVARS)
+This is a measure of how much the intensity of a brain image changes in comparison to the previous timepoint
+
+#### DVARS raw data (e002) / DVARS for medn (meica denoised) and tsoc (optimally combined)
+<!
+<img src="images/TASK_e002_DVARS_raw.gif" width="400px" />
+<img src="images/TASK_e002_DVARS_dn-oc.gif" width="400px" />
+!>
+
+DVARS Outliers for e002
+```{r engine='bash', echo=FALSE}
+cat ../TASK/TASK_e002_dvars_spike_vols
+```
+
+DVARS Outliers for Optimally Combined Time Series
+```{r engine='bash', echo=FALSE}
+cat ../TASK/TASK_e00213_tsoc_dvars_spike_vols
+```
+
+DVARS Outliers for Denoised Time Series
+```{r engine='bash', echo=FALSE}
+cat ../TASK/TASK_e00213_medn_dvars_spike_vols
+```
+
+###REGISTRATIONS
+####epi_reg to T1 and ANTS to MNI Standard Space
+
+### Optimally combined resting state to T1 (using epireg)
+<img src="images/TASK_e00213_tsoc_reoriented_to_T1.gif" width="1500px" />
+
+### Optimally combined resting state to subject-specific template
+<img src="images/TASK_e00213_tsoc_to_CT_epireg_ants.gif" width="1500px" />
+
+### Optimally combined resting state to MNI
+<img src="images/TASK_e00213_tsoc_reoriented_to_mni_epireg_ants.gif" width="1500px" />
+

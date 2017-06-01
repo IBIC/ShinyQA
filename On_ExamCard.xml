@@ -1,0 +1,2132 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="browse_dumpprotocols.xsl"?>
+<dump name="-normal">
+<ProtocolDumpFileHeader>
+    <DateCreated value ="8/22/2016 8:17:37 PM"/>    <Comment value ="Created by ExamCard_to_XML with inputs: &quot;G:\Site\ecdatabase\scanprotocols.pdb\Hospital\{B1860723-4F8F-476e-8075-D42C65706693}\InBox\UdallP2_On.ExamCard&quot; on system ( :: R517VM)"/>    <SoftwareStream value ="5.1.7.0"/></ProtocolDumpFileHeader>
+
+<folder id="Hospital">
+<examcard id="UdallP2_On">
+<protocol id="Survey_32ch_HeadCoil">
+<group id="n/a" parameters="106" name="InfoPage">
+<parameter name="Total scan duration" value="00:30.3"/>
+<parameter name="Rel. SNR" value="1"/>
+<parameter name="Act. TR/TE (ms)" value="9.8 / 4.6"/>
+<parameter name="ACQ matrix M x P" value="256 x 128"/>
+<parameter name="ACQ voxel MPS (mm)" value="0.98 / 1.95 / 10.0"/>
+<parameter name="REC voxel MPS (mm)" value="0.98 / 0.98 / 10.0"/>
+<parameter name="Scan percentage (%)" value="50"/>
+<parameter name="TFE shots" value="2"/>
+<parameter name="TFE dur. shot / acq (ms)" value="1124.0 / 629.1"/>
+<parameter name="TFE shot interval (ms)" value="1124.042"/>
+<parameter name="Min. TI delay" value="354.9754"/>
+<parameter name="Act. WFS (pix) / BW (Hz)" value="3.494 / 124.3"/>
+<parameter name="Min. WFS (pix) / Max. BW (Hz)" value="0.559 / 776.8"/>
+<parameter name="Min. TR/TE (ms)" value="9.8 / 1.37"/>
+<parameter name="SAR / local torso" value="&lt;  22 %"/>
+<parameter name="Whole body / level" value="&lt; 0.3 W/kg / normal"/>
+<parameter name="SED" value="  0.0 kJ/kg"/>
+<parameter name="B1+rms" value="0.77 uT"/>
+<parameter name="Max B1+rms" value="0.77 uT"/>
+<parameter name="PNS / level" value="49 % / normal"/>
+<parameter name="dB/dt" value="45.6 T/s"/>
+<parameter name="Sound Pressure Level (dB)" value="10.04709"/>
+</group>
+<group id="0" parameters="1028" name="Geometry">
+<parameter name="Nucleus" value="H1"/>
+<parameter name="Uniformity" value="CLEAR"/>
+<parameter name="FOV          FH (mm)" value="250">
+<subparameter name="AP (mm)" value="250"/>
+<subparameter name="stack    RL (mm)" value="50"/>
+</parameter>
+<parameter name="Voxel size   FH (mm)" value="0.976563">
+<subparameter name="AP (mm)" value="1.953125"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="10"/>
+<parameter name="Recon voxel size (mm)" value="0.9765625"/>
+<parameter name="Fold-over suppression" value="no"/>
+<parameter name="Reconstruction matrix" value="256"/>
+<parameter name="SENSE" value="no"/>
+<parameter name="k-t BLAST" value="no"/>
+<parameter name="Stacks" value="3">
+<subparameter name="current" value="A"/>
+<subparameter name="type" value="parallel"/>
+<subparameter name="slices" value="3"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="10"/>
+<subparameter name="slice orientation" value="sagittal"/>
+<subparameter name="fold-over direction" value="AP"/>
+<subparameter name="fat shift direction" value="F"/>
+</parameter>
+<parameter name="Slice scan order" value="default"/>
+<parameter name="Stack scan order" value="ascend"/>
+<parameter name="Move table per stack" value="no"/>
+<parameter name="Stack alignment" value="no"/>
+<parameter name="Stack display order" value="no"/>
+<parameter name="PlanAlign" value="no"/>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Catheter tracking" value="no"/>
+<parameter name="Interactive positioning" value="no"/>
+<parameter name="Allow table movement" value="no"/>
+</group>
+<group id="1" parameters="1028" name="Contrast">
+<parameter name="Scan type" value="Imaging"/>
+<parameter name="Scan mode" value="M2D">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="Contrast enhancement" value="T1"/>
+<parameter name="Acquisition mode" value="cartesian"/>
+<parameter name="Fast Imaging mode" value="TFE">
+<subparameter name="shot mode" value="multishot"/>
+</parameter>
+<parameter name="TFE factor" value="64">
+<subparameter name="startup echoes" value="default"/>
+<subparameter name="shot interval" value="shortest"/>
+<subparameter name="profile order" value="linear"/>
+</parameter>
+<parameter name="Echoes" value="1">
+<subparameter name="partial echo" value="yes"/>
+<subparameter name="shifted echo" value="no"/>
+</parameter>
+<parameter name="TE" value="in-phase">
+<subparameter name="(ms)" value="4.605344"/>
+</parameter>
+<parameter name="Flip angle (deg)" value="15"/>
+<parameter name="TR" value="shortest"/>
+<parameter name="Halfscan" value="no"/>
+<parameter name="Water-fat shift" value="user defined">
+<subparameter name="(pixels)" value="3.5"/>
+</parameter>
+<parameter name="Shim" value="default"/>
+<parameter name="mDIXON" value="no"/>
+<parameter name="Fat suppression" value="no"/>
+<parameter name="Water suppression" value="no"/>
+<parameter name="TFE prepulse" value="invert">
+<subparameter name="slice selection" value="no"/>
+<subparameter name="shared" value="no"/>
+<subparameter name="delay" value="user defined"/>
+<subparameter name="(ms)" value="800"/>
+<subparameter name="PSIR" value="no"/>
+</parameter>
+<parameter name="MTC" value="no"/>
+<parameter name="T2prep" value="no"/>
+<parameter name="Research prepulse" value="no"/>
+<parameter name="Diffusion mode" value="no"/>
+<parameter name="Elastography mode" value="no"/>
+<parameter name="Multi-transmit" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="B1 mode" value="default"/>
+<parameter name="SAR Patient data" value="auto"/>
+<parameter name="PNS mode" value="low"/>
+<parameter name="Gradient mode" value="default"/>
+<parameter name="SofTone mode" value="no"/>
+</group>
+<group id="2" parameters="1028" name="Motion">
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Heart rate &gt; 250 bpm" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+<parameter name="Flow compensation" value="no"/>
+<parameter name="fMRI echo stabilisation" value="no"/>
+<parameter name="Motion smoothing" value="no"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="3" parameters="1028" name="Dyn/Ang">
+<parameter name="Angio / Contrast enh." value="no"/>
+<parameter name="Quantitative flow" value="no"/>
+<parameter name="Manual start" value="no"/>
+<parameter name="+Abuse dynamic loop" value="no"/>
+<parameter name="Dynamic study" value="no"/>
+<parameter name="Arterial Spin labeling" value="no"/>
+</group>
+<group id="4" parameters="1028" name="Postproc">
+<parameter name="Preparation phases" value="auto"/>
+<parameter name="Interactive F0" value="no"/>
+<parameter name="SmartPlan survey" value="no"/>
+<parameter name="B0 field map" value="no"/>
+<parameter name="B1 field map" value="no"/>
+<parameter name="MIP/MPR" value="no"/>
+<parameter name="SWIp" value="no"/>
+<parameter name="Images" value="M, no, no, no"/>
+<parameter name="Autoview image" value="M"/>
+<parameter name="Calculated images" value="no, no, no, no"/>
+<parameter name="Reference tissue" value="Grey matter"/>
+<parameter name="Recon compression" value="No"/>
+<parameter name="Preset window contrast" value="soft"/>
+<parameter name="Reconstruction mode" value="real time"/>
+<parameter name="Save raw data" value="no"/>
+<parameter name="Hardcopy protocol" value="no"/>
+<parameter name="Image filter" value="system default"/>
+<parameter name="Geometry correction" value="default"/>
+</group>
+<group id="5" parameters="1028" name="Offc/Ang">
+<parameter name="Stacks" value="3">
+<subparameter name="current" value="A"/>
+</parameter>
+<parameter name="Stack Offc. AP (P=+mm)" value="-20">
+<subparameter name="RL (L=+mm)" value="0"/>
+<subparameter name="FH (H=+mm)" value="20"/>
+<subparameter name="Ang.  AP (deg)" value="0"/>
+<subparameter name="RL (deg)" value="0"/>
+<subparameter name="FH (deg)" value="0"/>
+<subparameter name="Free rotatable" value="no"/>
+</parameter>
+</group>
+<group id="9" parameters="1028" name="Summary">
+<parameter name="FOV          FH (mm)" value="250">
+<subparameter name="AP (mm)" value="250"/>
+<subparameter name="stack    RL (mm)" value="50"/>
+</parameter>
+<parameter name="Voxel size   FH (mm)" value="0.976563">
+<subparameter name="AP (mm)" value="1.953125"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="10"/>
+<parameter name="Stacks" value="3">
+<subparameter name="current" value="A"/>
+<subparameter name="slices" value="3"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="10"/>
+<subparameter name="slice orientation" value="sagittal"/>
+<subparameter name="fold-over direction" value="AP"/>
+</parameter>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Scan mode" value="M2D">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="TE" value="in-phase">
+<subparameter name="(ms)" value="4.605344"/>
+</parameter>
+<parameter name="Flip angle (deg)" value="15"/>
+<parameter name="TR" value="shortest"/>
+<parameter name="Fat suppression" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="PNS mode" value="low"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="10" parameters="1028" name="Physiology">
+<parameter name="Scan mode" value="M2D">
+<subparameter name="technique" value="FFE"/>
+<subparameter name="delay" value="user defined"/>
+<subparameter name="(ms)" value="800"/>
+</parameter>
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+</group>
+</protocol>
+<protocol id="MPRAGE_0.8mm On">
+<group id="n/a" parameters="106" name="InfoPage">
+<parameter name="Total scan duration" value="08:08.6"/>
+<parameter name="Rel. SNR" value="1"/>
+<parameter name="Act. TR/TE (ms)" value="9.9 / 4.5"/>
+<parameter name="ACQ matrix M x P" value="324 x 325"/>
+<parameter name="ACQ voxel MPS (mm)" value="0.80 / 0.80 / 0.80"/>
+<parameter name="REC voxel MPS (mm)" value="0.77 / 0.77 / 0.80"/>
+<parameter name="Scan percentage (%)" value="100.5556"/>
+<parameter name="TFE shots" value="181"/>
+<parameter name="TFE dur. shot / acq (ms)" value="2684.4 / 1724.5"/>
+<parameter name="TFE shot interval (ms)" value="2684.424"/>
+<parameter name="Min. TI delay" value="51.1846"/>
+<parameter name="Act. WFS (pix) / BW (Hz)" value="2.830 / 153.4"/>
+<parameter name="Min. WFS (pix) / Max. BW (Hz)" value="0.708 / 613.8"/>
+<parameter name="SAR / local torso" value="&lt;  14 %"/>
+<parameter name="Whole body / level" value="&lt; 0.2 W/kg / normal"/>
+<parameter name="SED" value="&lt; 0.1 kJ/kg"/>
+<parameter name="B1+rms" value="0.61 uT"/>
+<parameter name="Max B1+rms" value="0.61 uT"/>
+<parameter name="PNS / level" value="60 % / normal"/>
+<parameter name="dB/dt" value="53.1 T/s"/>
+<parameter name="Sound Pressure Level (dB)" value="16.93767"/>
+</group>
+<group id="0" parameters="1028" name="Geometry">
+<parameter name="Nucleus" value="H1"/>
+<parameter name="Uniformity" value="CLEAR"/>
+<parameter name="FOV          RL (mm)" value="260">
+<subparameter name="AP (mm)" value="260"/>
+<subparameter name="FH (mm)" value="189.6"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="0.8">
+<subparameter name="AP (mm)" value="0.8"/>
+<subparameter name="FH (mm)" value="0.8"/>
+</parameter>
+<parameter name="Recon voxel size (mm)" value="0.7738096"/>
+<parameter name="Fold-over suppression" value="no"/>
+<parameter name="Slice oversampling" value="default"/>
+<parameter name="RF select. FOS" value="no"/>
+<parameter name="Reconstruction matrix" value="336"/>
+<parameter name="SENSE" value="yes">
+<subparameter name="P reduction (AP)" value="1.8"/>
+<subparameter name="S reduction (FH)" value="1.9"/>
+</parameter>
+<parameter name="k-t BLAST" value="no"/>
+<parameter name="Overcontiguous slices" value="no"/>
+<parameter name="Stacks" value="1">
+<subparameter name="slices" value="237"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+<subparameter name="fat shift direction" value="L"/>
+</parameter>
+<parameter name="Multi-chunk" value="no"/>
+<parameter name="PlanAlign" value="no"/>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Catheter tracking" value="no"/>
+<parameter name="Interactive positioning" value="no"/>
+<parameter name="Allow table movement" value="no"/>
+</group>
+<group id="1" parameters="1028" name="Contrast">
+<parameter name="Scan type" value="Imaging"/>
+<parameter name="Scan mode" value="3D">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="Contrast enhancement" value="T1"/>
+<parameter name="Acquisition mode" value="cartesian"/>
+<parameter name="Fast Imaging mode" value="TFE">
+<subparameter name="3D non-selective" value="no"/>
+<subparameter name="shot mode" value="multishot"/>
+</parameter>
+<parameter name="TFE factor" value="175">
+<subparameter name="3D free factor" value="no"/>
+<subparameter name="startup echoes" value="default"/>
+<subparameter name="shot interval" value="shortest"/>
+<subparameter name="profile order" value="low_high"/>
+<subparameter name="turbo direction" value="Z"/>
+</parameter>
+<parameter name="Echoes" value="1">
+<subparameter name="partial echo" value="no"/>
+<subparameter name="shifted echo" value="no"/>
+</parameter>
+<parameter name="TE" value="shortest"/>
+<parameter name="Flip angle (deg)" value="8"/>
+<parameter name="TR" value="shortest"/>
+<parameter name="Halfscan" value="no"/>
+<parameter name="Water-fat shift" value="maximum"/>
+<parameter name="Shim" value="auto"/>
+<parameter name="mDIXON" value="no"/>
+<parameter name="Fat suppression" value="no"/>
+<parameter name="Water suppression" value="no"/>
+<parameter name="TFE prepulse" value="invert">
+<subparameter name="slice selection" value="no"/>
+<subparameter name="delay" value="user defined"/>
+<subparameter name="(ms)" value="955"/>
+<subparameter name="PSIR" value="no"/>
+</parameter>
+<parameter name="MTC" value="no"/>
+<parameter name="T2prep" value="no"/>
+<parameter name="Research prepulse" value="no"/>
+<parameter name="Diffusion mode" value="no"/>
+<parameter name="Elastography mode" value="no"/>
+<parameter name="Multi-transmit" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="B1 mode" value="default"/>
+<parameter name="SAR Patient data" value="auto"/>
+<parameter name="PNS mode" value="low"/>
+<parameter name="Gradient mode" value="default"/>
+<parameter name="SofTone mode" value="no"/>
+</group>
+<group id="2" parameters="1028" name="Motion">
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Heart rate &gt; 250 bpm" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+<parameter name="Flow compensation" value="no"/>
+<parameter name="fMRI echo stabilisation" value="no"/>
+<parameter name="Motion smoothing" value="no"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="3" parameters="1028" name="Dyn/Ang">
+<parameter name="Angio / Contrast enh." value="no"/>
+<parameter name="Quantitative flow" value="no"/>
+<parameter name="CENTRA" value="no"/>
+<parameter name="Manual start" value="no"/>
+<parameter name="+Abuse dynamic loop" value="no"/>
+<parameter name="Dynamic study" value="no"/>
+<parameter name="Arterial Spin labeling" value="no"/>
+</group>
+<group id="4" parameters="1028" name="Postproc">
+<parameter name="Preparation phases" value="auto"/>
+<parameter name="Interactive F0" value="no"/>
+<parameter name="SmartPlan survey" value="no"/>
+<parameter name="B0 field map" value="no"/>
+<parameter name="B1 field map" value="no"/>
+<parameter name="MIP/MPR" value="no"/>
+<parameter name="SWIp" value="no"/>
+<parameter name="Images" value="M, no, no, no"/>
+<parameter name="Autoview image" value="M"/>
+<parameter name="Calculated images" value="no, no, no, no"/>
+<parameter name="Reference tissue" value="White matter"/>
+<parameter name="Recon compression" value="No"/>
+<parameter name="Preset window contrast" value="soft"/>
+<parameter name="Reconstruction mode" value="immediate"/>
+<parameter name="Save raw data" value="no"/>
+<parameter name="Hardcopy protocol" value="no"/>
+<parameter name="Image filter" value="system default"/>
+<parameter name="Geometry correction" value="default"/>
+<parameter name="Elliptical k-space shutter" value="default"/>
+</group>
+<group id="5" parameters="1028" name="Offc/Ang">
+<parameter name="Stacks" value="1"/>
+<parameter name="Stack Offc. AP (P=+mm)" value="-14.52906">
+<subparameter name="RL (L=+mm)" value="1.194492E-06"/>
+<subparameter name="FH (H=+mm)" value="0"/>
+<subparameter name="Ang.  AP (deg)" value="0"/>
+<subparameter name="RL (deg)" value="0"/>
+<subparameter name="FH (deg)" value="4.710512E-06"/>
+<subparameter name="Free rotatable" value="no"/>
+</parameter>
+</group>
+<group id="9" parameters="1028" name="Summary">
+<parameter name="FOV          RL (mm)" value="260">
+<subparameter name="AP (mm)" value="260"/>
+<subparameter name="FH (mm)" value="189.6"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="0.8">
+<subparameter name="AP (mm)" value="0.8"/>
+<subparameter name="FH (mm)" value="0.8"/>
+<subparameter name="P reduction (AP)" value="1.8"/>
+<subparameter name="S reduction (FH)" value="1.9"/>
+</parameter>
+<parameter name="Stacks" value="1">
+<subparameter name="slices" value="237"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+</parameter>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Scan mode" value="3D">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="TE" value="shortest"/>
+<parameter name="Flip angle (deg)" value="8"/>
+<parameter name="TR" value="shortest"/>
+<parameter name="Fat suppression" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="PNS mode" value="low"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="10" parameters="1028" name="Physiology">
+<parameter name="Scan mode" value="3D">
+<subparameter name="technique" value="FFE"/>
+<subparameter name="delay" value="user defined"/>
+<subparameter name="(ms)" value="955"/>
+</parameter>
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+</group>
+</protocol>
+<protocol id="ME_RS_10min On">
+<group id="n/a" parameters="106" name="InfoPage">
+<parameter name="Total scan duration" value="10:17.5"/>
+<parameter name="Rel. SNR" value="1"/>
+<parameter name="Act. TR/TE1/delta TE (ms)" value="2500 / 9.5 / 18.0"/>
+<parameter name="Dyn. scan time" value="00:02.5"/>
+<parameter name="Time to k0" value="00:01.3"/>
+<parameter name="ACQ matrix M x P" value="64 x 61"/>
+<parameter name="ACQ voxel MPS (mm)" value="3.50 / 3.64 / 3.50"/>
+<parameter name="REC voxel MPS (mm)" value="3.50 / 3.50 / 3.50"/>
+<parameter name="Scan percentage (%)" value="96.15385"/>
+<parameter name="Packages" value="1"/>
+<parameter name="Min. slice gap (mm)" value="0"/>
+<parameter name="EPI factor" value="25"/>
+<parameter name="Act. WFS (pix) / BW (Hz)" value="6.197 / 70.1"/>
+<parameter name="BW in EPI freq. dir. (Hz)" value="2388.8"/>
+<parameter name="Min. WFS (pix) / Max. BW (Hz)" value="6.175 / 70.3"/>
+<parameter name="Min. TR/TE1/delta TE (ms)" value="2384 / 8.6 / 15"/>
+<parameter name="SAR / local torso" value="&lt;  51 %"/>
+<parameter name="Whole body / level" value="&lt; 0.7 W/kg / normal"/>
+<parameter name="SED" value="&lt; 0.4 kJ/kg"/>
+<parameter name="B1+rms" value="1.15 uT"/>
+<parameter name="Max B1+rms" value="1.15 uT"/>
+<parameter name="PNS / level" value="59 % / normal"/>
+<parameter name="dB/dt" value="86.6 T/s"/>
+<parameter name="Sound Pressure Level (dB)" value="22.85244"/>
+</group>
+<group id="8" parameters="1028" name="Conflicts">
+<subparameter name="AP (mm)" value="224"/>
+<subparameter name="AP (mm)" value="3.5"/>
+<parameter name="Recon voxel size (mm)" value="3.5"/>
+<parameter name="Reconstruction matrix" value="64">
+<subparameter name="slices" value="37"/>
+</parameter>
+<parameter name="Echoes" value="3">
+<subparameter name="dyn scans" value="240"/>
+</parameter>
+<parameter name="Reconstruction mode" value="real time">
+<subparameter name="reuse memory" value="no"/>
+</parameter>
+</group>
+<group id="0" parameters="1028" name="Geometry">
+<parameter name="Nucleus" value="H1"/>
+<parameter name="Uniformity" value="CLEAR"/>
+<parameter name="FOV          RL (mm)" value="224">
+<subparameter name="AP (mm)" value="224"/>
+<subparameter name="FH (mm)" value="129.5"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="3.5">
+<subparameter name="AP (mm)" value="3.5"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="3.5"/>
+<parameter name="Recon voxel size (mm)" value="3.5"/>
+<parameter name="Fold-over suppression" value="no"/>
+<parameter name="Reconstruction matrix" value="64"/>
+<parameter name="SENSE" value="yes">
+<subparameter name="P reduction (AP)" value="2.5"/>
+</parameter>
+<parameter name="k-t BLAST" value="no"/>
+<parameter name="Stacks" value="1">
+<subparameter name="type" value="parallel"/>
+<subparameter name="slices" value="37"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="0"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+<subparameter name="fat shift direction" value="P"/>
+</parameter>
+<parameter name="Minimum number of packages" value="1"/>
+<parameter name="Slice scan order" value="default"/>
+<parameter name="PlanAlign" value="no"/>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Catheter tracking" value="no"/>
+<parameter name="Interactive positioning" value="no"/>
+<parameter name="Allow table movement" value="no"/>
+</group>
+<group id="1" parameters="1028" name="Contrast">
+<parameter name="Scan type" value="Imaging"/>
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="Contrast enhancement" value="no"/>
+<parameter name="Acquisition mode" value="cartesian"/>
+<parameter name="Fast Imaging mode" value="EPI">
+<subparameter name="shot mode" value="single-shot"/>
+</parameter>
+<parameter name="Echoes" value="3">
+<subparameter name="partial echo" value="no"/>
+<subparameter name="shifted echo" value="no"/>
+</parameter>
+<parameter name="TE  first" value="user defined">
+<subparameter name="(ms)" value="9.5"/>
+<subparameter name="echospacing" value="user defined"/>
+<subparameter name="(ms)" value="18"/>
+</parameter>
+<parameter name="Flip angle (deg)" value="79"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="2500"/>
+</parameter>
+<parameter name="Halfscan" value="no"/>
+<parameter name="Water-fat shift" value="minimum"/>
+<parameter name="Shim" value="auto"/>
+<parameter name="mDIXON" value="no"/>
+<parameter name="Fat suppression" value="SPIR">
+<subparameter name="strength" value="strong"/>
+<subparameter name="frequency offset" value="default"/>
+</parameter>
+<parameter name="Water suppression" value="no"/>
+<parameter name="MTC" value="no"/>
+<parameter name="Research prepulse" value="no"/>
+<parameter name="Diffusion mode" value="no"/>
+<parameter name="Elastography mode" value="no"/>
+<parameter name="Multi-transmit" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="B1 mode" value="default"/>
+<parameter name="SAR Patient data" value="auto"/>
+<parameter name="PNS mode" value="low"/>
+<parameter name="Gradient mode" value="maximum"/>
+<parameter name="SofTone mode" value="no"/>
+</group>
+<group id="2" parameters="1028" name="Motion">
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Heart rate &gt; 250 bpm" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+<parameter name="Flow compensation" value="no"/>
+<parameter name="Temporal slice spacing" value="equidistant"/>
+<parameter name="fMRI echo stabilisation" value="no"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="3" parameters="1028" name="Dyn/Ang">
+<parameter name="Angio / Contrast enh." value="no"/>
+<parameter name="Quantitative flow" value="no"/>
+<parameter name="Manual start" value="yes"/>
+<parameter name="+Abuse dynamic loop" value="no"/>
+<parameter name="Dynamic study" value="individual">
+<subparameter name="dyn scans" value="240"/>
+<subparameter name="recon multiplier" value="1"/>
+<subparameter name="dyn scan times" value="shortest"/>
+<subparameter name="fov time mode" value="default"/>
+<subparameter name="dummy scans" value="5"/>
+<subparameter name="immediate subtraction" value="no"/>
+<subparameter name="fast next scan" value="no"/>
+<subparameter name="synch. ext. device" value="yes"/>
+<subparameter name="start at dyn." value="1"/>
+<subparameter name="interval (dyn)" value="1"/>
+<subparameter name="dyn stabilization" value="no"/>
+<subparameter name="prospect. motion corr." value="no"/>
+</parameter>
+<parameter name="Keyhole" value="no"/>
+<parameter name="Arterial Spin labeling" value="no"/>
+</group>
+<group id="4" parameters="1028" name="Postproc">
+<parameter name="Preparation phases" value="full"/>
+<parameter name="Interactive F0" value="no"/>
+<parameter name="SmartPlan survey" value="no"/>
+<parameter name="B0 field map" value="no"/>
+<parameter name="B1 field map" value="no"/>
+<parameter name="MIP/MPR" value="no"/>
+<parameter name="SWIp" value="no"/>
+<parameter name="Images" value="M, no, no, no"/>
+<parameter name="Autoview image" value="M"/>
+<parameter name="Calculated images" value="no, no, no, no"/>
+<parameter name="Reference tissue" value="Grey matter"/>
+<parameter name="EPI 2D phase correction" value="no"/>
+<parameter name="Recon compression" value="No"/>
+<parameter name="Preset window contrast" value="soft"/>
+<parameter name="Reconstruction mode" value="real time">
+<subparameter name="reuse memory" value="no"/>
+</parameter>
+<parameter name="Save raw data" value="no"/>
+<parameter name="Hardcopy protocol" value="no"/>
+<parameter name="Image filter" value="system default"/>
+<parameter name="Geometry correction" value="default"/>
+</group>
+<group id="5" parameters="1028" name="Offc/Ang">
+<parameter name="Stacks" value="1"/>
+<parameter name="Stack Offc. AP (P=+mm)" value="-11.48489">
+<subparameter name="RL (L=+mm)" value="-1.021456"/>
+<subparameter name="FH (H=+mm)" value="16.14783"/>
+<subparameter name="Ang.  AP (deg)" value="-2.503433"/>
+<subparameter name="RL (deg)" value="0.009958249"/>
+<subparameter name="FH (deg)" value="0.2279846"/>
+<subparameter name="Free rotatable" value="no"/>
+</parameter>
+</group>
+<group id="9" parameters="1028" name="Summary">
+<parameter name="FOV          RL (mm)" value="224">
+<subparameter name="AP (mm)" value="224"/>
+<subparameter name="FH (mm)" value="129.5"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="3.5">
+<subparameter name="AP (mm)" value="3.5"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="3.5">
+<subparameter name="P reduction (AP)" value="2.5"/>
+</parameter>
+<parameter name="Stacks" value="1">
+<subparameter name="slices" value="37"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="0"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+</parameter>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="TE  first" value="user defined">
+<subparameter name="(ms)" value="9.5"/>
+<subparameter name="echospacing" value="user defined"/>
+<subparameter name="(ms)" value="18"/>
+</parameter>
+<parameter name="Flip angle (deg)" value="79"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="2500"/>
+</parameter>
+<parameter name="Fat suppression" value="SPIR"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="PNS mode" value="low"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="10" parameters="1028" name="Physiology">
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+</group>
+</protocol>
+<protocol id="ME_Task_10min On">
+<group id="n/a" parameters="106" name="InfoPage">
+<parameter name="Total scan duration" value="10:17.5"/>
+<parameter name="Rel. SNR" value="1"/>
+<parameter name="Act. TR/TE1/delta TE (ms)" value="2500 / 9.5 / 18.0"/>
+<parameter name="Dyn. scan time" value="00:02.5"/>
+<parameter name="Time to k0" value="00:01.3"/>
+<parameter name="ACQ matrix M x P" value="64 x 61"/>
+<parameter name="ACQ voxel MPS (mm)" value="3.50 / 3.64 / 3.50"/>
+<parameter name="REC voxel MPS (mm)" value="3.50 / 3.50 / 3.50"/>
+<parameter name="Scan percentage (%)" value="96.15385"/>
+<parameter name="Packages" value="1"/>
+<parameter name="Min. slice gap (mm)" value="0"/>
+<parameter name="EPI factor" value="25"/>
+<parameter name="Act. WFS (pix) / BW (Hz)" value="6.131 / 70.8"/>
+<parameter name="BW in EPI freq. dir. (Hz)" value="2451.2"/>
+<parameter name="Min. WFS (pix) / Max. BW (Hz)" value="6.110 / 71.1"/>
+<parameter name="Min. TR/TE1/delta TE (ms)" value="2383 / 8.5 / 15"/>
+<parameter name="SAR / local torso" value="&lt;  51 %"/>
+<parameter name="Whole body / level" value="&lt; 0.7 W/kg / normal"/>
+<parameter name="SED" value="&lt; 0.4 kJ/kg"/>
+<parameter name="B1+rms" value="1.16 uT"/>
+<parameter name="Max B1+rms" value="1.16 uT"/>
+<parameter name="PNS / level" value="60 % / normal"/>
+<parameter name="dB/dt" value="76.2 T/s"/>
+<parameter name="Sound Pressure Level (dB)" value="23.52124"/>
+</group>
+<group id="8" parameters="1028" name="Conflicts">
+<subparameter name="AP (mm)" value="224"/>
+<subparameter name="AP (mm)" value="3.5"/>
+<parameter name="Recon voxel size (mm)" value="3.5"/>
+<parameter name="Reconstruction matrix" value="64">
+<subparameter name="slices" value="37"/>
+</parameter>
+<parameter name="Echoes" value="3">
+<subparameter name="dyn scans" value="240"/>
+</parameter>
+<parameter name="Reconstruction mode" value="real time">
+<subparameter name="reuse memory" value="no"/>
+</parameter>
+</group>
+<group id="0" parameters="1028" name="Geometry">
+<parameter name="Nucleus" value="H1"/>
+<parameter name="Uniformity" value="CLEAR"/>
+<parameter name="FOV          RL (mm)" value="224">
+<subparameter name="AP (mm)" value="224"/>
+<subparameter name="FH (mm)" value="129.5"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="3.5">
+<subparameter name="AP (mm)" value="3.5"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="3.5"/>
+<parameter name="Recon voxel size (mm)" value="3.5"/>
+<parameter name="Fold-over suppression" value="no"/>
+<parameter name="Reconstruction matrix" value="64"/>
+<parameter name="SENSE" value="yes">
+<subparameter name="P reduction (AP)" value="2.5"/>
+</parameter>
+<parameter name="k-t BLAST" value="no"/>
+<parameter name="Stacks" value="1">
+<subparameter name="type" value="parallel"/>
+<subparameter name="slices" value="37"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="0"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+<subparameter name="fat shift direction" value="P"/>
+</parameter>
+<parameter name="Minimum number of packages" value="1"/>
+<parameter name="Slice scan order" value="default"/>
+<parameter name="PlanAlign" value="no"/>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Catheter tracking" value="no"/>
+<parameter name="Interactive positioning" value="no"/>
+<parameter name="Allow table movement" value="no"/>
+</group>
+<group id="1" parameters="1028" name="Contrast">
+<parameter name="Scan type" value="Imaging"/>
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="Contrast enhancement" value="no"/>
+<parameter name="Acquisition mode" value="cartesian"/>
+<parameter name="Fast Imaging mode" value="EPI">
+<subparameter name="shot mode" value="single-shot"/>
+</parameter>
+<parameter name="Echoes" value="3">
+<subparameter name="partial echo" value="no"/>
+<subparameter name="shifted echo" value="no"/>
+</parameter>
+<parameter name="TE  first" value="user defined">
+<subparameter name="(ms)" value="9.5"/>
+<subparameter name="echospacing" value="user defined"/>
+<subparameter name="(ms)" value="18"/>
+</parameter>
+<parameter name="Flip angle (deg)" value="79"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="2500"/>
+</parameter>
+<parameter name="Halfscan" value="no"/>
+<parameter name="Water-fat shift" value="minimum"/>
+<parameter name="Shim" value="auto"/>
+<parameter name="mDIXON" value="no"/>
+<parameter name="Fat suppression" value="SPIR">
+<subparameter name="strength" value="strong"/>
+<subparameter name="frequency offset" value="default"/>
+</parameter>
+<parameter name="Water suppression" value="no"/>
+<parameter name="MTC" value="no"/>
+<parameter name="Research prepulse" value="no"/>
+<parameter name="Diffusion mode" value="no"/>
+<parameter name="Elastography mode" value="no"/>
+<parameter name="Multi-transmit" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="B1 mode" value="default"/>
+<parameter name="SAR Patient data" value="auto"/>
+<parameter name="PNS mode" value="low"/>
+<parameter name="Gradient mode" value="maximum"/>
+<parameter name="SofTone mode" value="no"/>
+</group>
+<group id="2" parameters="1028" name="Motion">
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Heart rate &gt; 250 bpm" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+<parameter name="Flow compensation" value="no"/>
+<parameter name="Temporal slice spacing" value="equidistant"/>
+<parameter name="fMRI echo stabilisation" value="no"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="3" parameters="1028" name="Dyn/Ang">
+<parameter name="Angio / Contrast enh." value="no"/>
+<parameter name="Quantitative flow" value="no"/>
+<parameter name="Manual start" value="yes"/>
+<parameter name="+Abuse dynamic loop" value="no"/>
+<parameter name="Dynamic study" value="individual">
+<subparameter name="dyn scans" value="240"/>
+<subparameter name="recon multiplier" value="1"/>
+<subparameter name="dyn scan times" value="shortest"/>
+<subparameter name="fov time mode" value="default"/>
+<subparameter name="dummy scans" value="5"/>
+<subparameter name="immediate subtraction" value="no"/>
+<subparameter name="fast next scan" value="no"/>
+<subparameter name="synch. ext. device" value="yes"/>
+<subparameter name="start at dyn." value="1"/>
+<subparameter name="interval (dyn)" value="1"/>
+<subparameter name="dyn stabilization" value="no"/>
+<subparameter name="prospect. motion corr." value="no"/>
+</parameter>
+<parameter name="Keyhole" value="no"/>
+<parameter name="Arterial Spin labeling" value="no"/>
+</group>
+<group id="4" parameters="1028" name="Postproc">
+<parameter name="Preparation phases" value="full"/>
+<parameter name="Interactive F0" value="no"/>
+<parameter name="SmartPlan survey" value="no"/>
+<parameter name="B0 field map" value="no"/>
+<parameter name="B1 field map" value="no"/>
+<parameter name="MIP/MPR" value="no"/>
+<parameter name="SWIp" value="no"/>
+<parameter name="Images" value="M, no, no, no"/>
+<parameter name="Autoview image" value="M"/>
+<parameter name="Calculated images" value="no, no, no, no"/>
+<parameter name="Reference tissue" value="Grey matter"/>
+<parameter name="EPI 2D phase correction" value="no"/>
+<parameter name="Recon compression" value="No"/>
+<parameter name="Preset window contrast" value="soft"/>
+<parameter name="Reconstruction mode" value="real time">
+<subparameter name="reuse memory" value="no"/>
+</parameter>
+<parameter name="Save raw data" value="no"/>
+<parameter name="Hardcopy protocol" value="no"/>
+<parameter name="Image filter" value="system default"/>
+<parameter name="Geometry correction" value="default"/>
+</group>
+<group id="5" parameters="1028" name="Offc/Ang">
+<parameter name="Stacks" value="1"/>
+<parameter name="Stack Offc. AP (P=+mm)" value="7.525084">
+<subparameter name="RL (L=+mm)" value="0"/>
+<subparameter name="FH (H=+mm)" value="19.23077"/>
+<subparameter name="Ang.  AP (deg)" value="0"/>
+<subparameter name="RL (deg)" value="-7.394372"/>
+<subparameter name="FH (deg)" value="0"/>
+<subparameter name="Free rotatable" value="no"/>
+</parameter>
+</group>
+<group id="9" parameters="1028" name="Summary">
+<parameter name="FOV          RL (mm)" value="224">
+<subparameter name="AP (mm)" value="224"/>
+<subparameter name="FH (mm)" value="129.5"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="3.5">
+<subparameter name="AP (mm)" value="3.5"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="3.5">
+<subparameter name="P reduction (AP)" value="2.5"/>
+</parameter>
+<parameter name="Stacks" value="1">
+<subparameter name="slices" value="37"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="0"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+</parameter>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="TE  first" value="user defined">
+<subparameter name="(ms)" value="9.5"/>
+<subparameter name="echospacing" value="user defined"/>
+<subparameter name="(ms)" value="18"/>
+</parameter>
+<parameter name="Flip angle (deg)" value="79"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="2500"/>
+</parameter>
+<parameter name="Fat suppression" value="SPIR"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="PNS mode" value="low"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="10" parameters="1028" name="Physiology">
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+</group>
+</protocol>
+<protocol id="B0_ME On">
+<group id="n/a" parameters="106" name="InfoPage">
+<parameter name="Total scan duration" value="01:32.2"/>
+<parameter name="Rel. SNR" value="1"/>
+<parameter name="Act. TR/TE (ms)" value="10 / 2.5"/>
+<parameter name="ACQ matrix M x P" value="128 x 128"/>
+<parameter name="ACQ voxel MPS (mm)" value="1.75 / 1.75 / 3.50"/>
+<parameter name="REC voxel MPS (mm)" value="1.40 / 1.40 / 3.50"/>
+<parameter name="Scan percentage (%)" value="100"/>
+<parameter name="Act. WFS (pix) / BW (Hz)" value="0.500 / 868.1"/>
+<parameter name="Min. WFS (pix) / Max. BW (Hz)" value="0.200 / 2170.1"/>
+<parameter name="Min. TR/TE (ms)" value="5.1 / 2.5"/>
+<parameter name="SAR / local torso" value="&lt;  17 %"/>
+<parameter name="Whole body / level" value="&lt; 0.2 W/kg / normal"/>
+<parameter name="SED" value="  0.0 kJ/kg"/>
+<parameter name="B1+rms" value="0.68 uT"/>
+<parameter name="Max B1+rms" value="0.68 uT"/>
+<parameter name="PNS / level" value="79 % / normal"/>
+<parameter name="dB/dt" value="84.0 T/s"/>
+<parameter name="Sound Pressure Level (dB)" value="19.54893"/>
+</group>
+<group id="0" parameters="1028" name="Geometry">
+<parameter name="Nucleus" value="H1"/>
+<parameter name="Uniformity" value="CLEAR"/>
+<parameter name="FOV          RL (mm)" value="224">
+<subparameter name="AP (mm)" value="224"/>
+<subparameter name="FH (mm)" value="129.5"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="1.75">
+<subparameter name="AP (mm)" value="1.75"/>
+<subparameter name="FH (mm)" value="3.5"/>
+</parameter>
+<parameter name="Recon voxel size (mm)" value="1.4"/>
+<parameter name="Fold-over suppression" value="no"/>
+<parameter name="Slice oversampling" value="default"/>
+<parameter name="RF select. FOS" value="no"/>
+<parameter name="Reconstruction matrix" value="160"/>
+<parameter name="SENSE" value="no"/>
+<parameter name="k-t BLAST" value="no"/>
+<parameter name="Overcontiguous slices" value="no"/>
+<parameter name="Stacks" value="1">
+<subparameter name="slices" value="37"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+<subparameter name="fat shift direction" value="L"/>
+</parameter>
+<parameter name="Multi-chunk" value="no"/>
+<parameter name="PlanAlign" value="no"/>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Catheter tracking" value="no"/>
+<parameter name="Interactive positioning" value="no"/>
+<parameter name="Allow table movement" value="no"/>
+</group>
+<group id="1" parameters="1028" name="Contrast">
+<parameter name="Scan type" value="Imaging"/>
+<parameter name="Scan mode" value="3D">
+<subparameter name="technique" value="FFE"/>
+<subparameter name="loop order" value="zy_order"/>
+</parameter>
+<parameter name="Contrast enhancement" value="T1"/>
+<parameter name="Acquisition mode" value="cartesian"/>
+<parameter name="Fast Imaging mode" value="none">
+<subparameter name="3D non-selective" value="no"/>
+</parameter>
+<parameter name="Echoes" value="1">
+<subparameter name="partial echo" value="no"/>
+<subparameter name="shifted echo" value="no"/>
+</parameter>
+<parameter name="TE" value="shortest"/>
+<parameter name="Flip angle (deg)" value="10"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="10"/>
+</parameter>
+<parameter name="Halfscan" value="no"/>
+<parameter name="Water-fat shift" value="user defined">
+<subparameter name="(pixels)" value="0.5"/>
+</parameter>
+<parameter name="Shim" value="auto"/>
+<parameter name="mDIXON" value="no"/>
+<parameter name="Fat suppression" value="no"/>
+<parameter name="Water suppression" value="no"/>
+<parameter name="MTC" value="no"/>
+<parameter name="Research prepulse" value="no"/>
+<parameter name="Diffusion mode" value="no"/>
+<parameter name="Elastography mode" value="no"/>
+<parameter name="Multi-transmit" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="B1 mode" value="default"/>
+<parameter name="SAR Patient data" value="auto"/>
+<parameter name="PNS mode" value="moderate"/>
+<parameter name="Gradient mode" value="maximum"/>
+<parameter name="SofTone mode" value="no"/>
+</group>
+<group id="2" parameters="1028" name="Motion">
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Heart rate &gt; 250 bpm" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+<parameter name="Flow compensation" value="yes"/>
+<parameter name="fMRI echo stabilisation" value="no"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="3" parameters="1028" name="Dyn/Ang">
+<parameter name="Angio / Contrast enh." value="no"/>
+<parameter name="Quantitative flow" value="no"/>
+<parameter name="Manual start" value="no"/>
+<parameter name="+Abuse dynamic loop" value="no"/>
+<parameter name="Dynamic study" value="no"/>
+<parameter name="Arterial Spin labeling" value="no"/>
+</group>
+<group id="4" parameters="1028" name="Postproc">
+<parameter name="Preparation phases" value="full"/>
+<parameter name="Interactive F0" value="no"/>
+<parameter name="SmartPlan survey" value="no"/>
+<parameter name="B0 field map" value="yes">
+<subparameter name="delta TE (ms)" value="1"/>
+</parameter>
+<parameter name="B1 field map" value="no"/>
+<parameter name="MIP/MPR" value="no"/>
+<parameter name="SWIp" value="no"/>
+<parameter name="Images" value="M, no, no, no"/>
+<parameter name="Autoview image" value="M"/>
+<parameter name="Calculated images" value="B0, no, no, no"/>
+<parameter name="Reference tissue" value="Grey matter"/>
+<parameter name="Recon compression" value="No"/>
+<parameter name="Preset window contrast" value="soft"/>
+<parameter name="Reconstruction mode" value="real time"/>
+<parameter name="Save raw data" value="no"/>
+<parameter name="Hardcopy protocol" value="no"/>
+<parameter name="Image filter" value="system default"/>
+<parameter name="Geometry correction" value="default"/>
+<parameter name="Elliptical k-space shutter" value="default"/>
+</group>
+<group id="5" parameters="1028" name="Offc/Ang">
+<parameter name="Stacks" value="1"/>
+<parameter name="Stack Offc. AP (P=+mm)" value="-11.48489">
+<subparameter name="RL (L=+mm)" value="-1.021456"/>
+<subparameter name="FH (H=+mm)" value="16.14783"/>
+<subparameter name="Ang.  AP (deg)" value="-2.503433"/>
+<subparameter name="RL (deg)" value="0.009958249"/>
+<subparameter name="FH (deg)" value="0.2279846"/>
+<subparameter name="Free rotatable" value="no"/>
+</parameter>
+</group>
+<group id="9" parameters="1028" name="Summary">
+<parameter name="FOV          RL (mm)" value="224">
+<subparameter name="AP (mm)" value="224"/>
+<subparameter name="FH (mm)" value="129.5"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="1.75">
+<subparameter name="AP (mm)" value="1.75"/>
+<subparameter name="FH (mm)" value="3.5"/>
+</parameter>
+<parameter name="Stacks" value="1">
+<subparameter name="slices" value="37"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+</parameter>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Scan mode" value="3D">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="TE" value="shortest"/>
+<parameter name="Flip angle (deg)" value="10"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="10"/>
+</parameter>
+<parameter name="Fat suppression" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="PNS mode" value="moderate"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="10" parameters="1028" name="Physiology">
+<parameter name="Scan mode" value="3D">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+</group>
+</protocol>
+<protocol id="PCASL_pld2000_notilt On">
+<group id="n/a" parameters="106" name="InfoPage">
+<parameter name="Research Options used" value="10"/>
+<parameter name="Total scan duration" value="05:10.0"/>
+<parameter name="Rel. SNR" value="1"/>
+<parameter name="Act. TR/TE (ms)" value="5000 / 12"/>
+<parameter name="Dyn. scan time" value="00:10.0"/>
+<parameter name="Time to k0" value="00:05.0"/>
+<parameter name="ACQ matrix M x P" value="64 x 61"/>
+<parameter name="ACQ voxel MPS (mm)" value="3.50 / 3.63 / 5.00"/>
+<parameter name="REC voxel MPS (mm)" value="2.80 / 2.80 / 5.00"/>
+<parameter name="Scan percentage (%)" value="96.42857"/>
+<parameter name="Packages" value="1"/>
+<parameter name="Min. slice gap (mm)" value="0"/>
+<parameter name="EPI factor" value="27"/>
+<parameter name="Act. WFS (pix) / BW (Hz)" value="6.829 / 63.6"/>
+<parameter name="BW in EPI freq. dir. (Hz)" value="2693.4"/>
+<parameter name="Min. WFS (pix) / Max. BW (Hz)" value="6.827 / 63.6"/>
+<parameter name="Min. TR/TE (ms)" value="4928 / 12"/>
+<parameter name="SAR / local torso" value="&lt;  86 %"/>
+<parameter name="Whole body / level" value="&lt; 1.1 W/kg / normal"/>
+<parameter name="SED" value="&lt; 0.3 kJ/kg"/>
+<parameter name="B1+rms" value="1.50 uT"/>
+<parameter name="Max B1+rms" value="1.50 uT"/>
+<parameter name="PNS / level" value="59 % / normal"/>
+<parameter name="dB/dt" value="66.0 T/s"/>
+<parameter name="Sound Pressure Level (dB)" value="23.13297"/>
+</group>
+<group id="0" parameters="1028" name="Geometry">
+<parameter name="Nucleus" value="H1"/>
+<parameter name="Uniformity" value="CLEAR"/>
+<parameter name="FOV          RL (mm)" value="224">
+<subparameter name="AP (mm)" value="224"/>
+<subparameter name="FH (mm)" value="143"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="3.4375">
+<subparameter name="AP (mm)" value="3.5"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="5"/>
+<parameter name="Recon voxel size (mm)" value="2.8"/>
+<parameter name="Fold-over suppression" value="no"/>
+<parameter name="Reconstruction matrix" value="80"/>
+<parameter name="SENSE" value="yes">
+<subparameter name="P reduction (AP)" value="2.3"/>
+</parameter>
+<parameter name="k-t BLAST" value="no"/>
+<parameter name="Stacks" value="1">
+<subparameter name="type" value="parallel"/>
+<subparameter name="slices" value="24"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="1"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+<subparameter name="fat shift direction" value="P"/>
+</parameter>
+<parameter name="Minimum number of packages" value="1"/>
+<parameter name="Slice scan order" value="ascend"/>
+<parameter name="PlanAlign" value="no"/>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Catheter tracking" value="no"/>
+<parameter name="Interactive positioning" value="no"/>
+<parameter name="Allow table movement" value="no"/>
+</group>
+<group id="1" parameters="1028" name="Contrast">
+<parameter name="Scan type" value="Imaging"/>
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="Contrast enhancement" value="no"/>
+<parameter name="Acquisition mode" value="cartesian"/>
+<parameter name="Fast Imaging mode" value="EPI">
+<subparameter name="shot mode" value="single-shot"/>
+</parameter>
+<parameter name="Echoes" value="1">
+<subparameter name="partial echo" value="no"/>
+<subparameter name="shifted echo" value="no"/>
+</parameter>
+<parameter name="TE" value="shortest"/>
+<parameter name="Flip angle (deg)" value="90"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="5000"/>
+</parameter>
+<parameter name="Halfscan" value="no"/>
+<parameter name="Water-fat shift" value="maximum"/>
+<parameter name="Shim" value="auto"/>
+<parameter name="mDIXON" value="no"/>
+<parameter name="Fat suppression" value="SPIR">
+<subparameter name="strength" value="strong"/>
+<subparameter name="frequency offset" value="default"/>
+</parameter>
+<parameter name="Water suppression" value="no"/>
+<parameter name="MTC" value="no"/>
+<parameter name="Research prepulse" value="no"/>
+<parameter name="Diffusion mode" value="no"/>
+<parameter name="Elastography mode" value="no"/>
+<parameter name="Multi-transmit" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="B1 mode" value="default"/>
+<parameter name="SAR Patient data" value="auto"/>
+<parameter name="PNS mode" value="low"/>
+<parameter name="Gradient mode" value="default"/>
+<parameter name="SofTone mode" value="no"/>
+</group>
+<group id="2" parameters="1028" name="Motion">
+<parameter name="Multiphase ASL" value="no"/>
+<parameter name="Heart rate &gt; 250 bpm" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+<parameter name="Flow compensation" value="no"/>
+<parameter name="Temporal slice spacing" value="default"/>
+<parameter name="fMRI echo stabilisation" value="no"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="3" parameters="1028" name="Dyn/Ang">
+<parameter name="Angio / Contrast enh." value="no"/>
+<parameter name="Quantitative flow" value="no"/>
+<parameter name="Manual start" value="no"/>
+<parameter name="+Abuse dynamic loop" value="no"/>
+<parameter name="Dynamic study" value="individual">
+<subparameter name="dyn scans" value="30"/>
+<subparameter name="recon multiplier" value="1"/>
+<subparameter name="dyn scan times" value="shortest"/>
+<subparameter name="fov time mode" value="default"/>
+<subparameter name="dummy scans" value="0"/>
+<subparameter name="immediate subtraction" value="no"/>
+<subparameter name="fast next scan" value="no"/>
+<subparameter name="synch. ext. device" value="no"/>
+<subparameter name="dyn stabilization" value="no"/>
+<subparameter name="prospect. motion corr." value="no"/>
+</parameter>
+<parameter name="Keyhole" value="no"/>
+<parameter name="Arterial Spin labeling" value="pCASL">
+<subparameter name="label type" value="parallel slab"/>
+<subparameter name="label distance (mm)" value="90"/>
+<subparameter name="label location" value="F"/>
+<subparameter name="label duration" value="1800"/>
+<subparameter name="post label delay (ms)" value="2000"/>
+<subparameter name="vascular crushing" value="no"/>
+<subparameter name="back. supp." value="yes"/>
+<subparameter name="back. supp. pulses" value="2050, 3400, 0, 0, 0"/>
+</parameter>
+</group>
+<group id="4" parameters="1028" name="Postproc">
+<parameter name="Preparation phases" value="auto"/>
+<parameter name="Interactive F0" value="no"/>
+<parameter name="SmartPlan survey" value="no"/>
+<parameter name="B0 field map" value="no"/>
+<parameter name="B1 field map" value="no"/>
+<parameter name="MIP/MPR" value="no"/>
+<parameter name="SWIp" value="no"/>
+<parameter name="Images" value="M, no, no, no"/>
+<parameter name="Autoview image" value="M"/>
+<parameter name="Calculated images" value="no, no, no, no"/>
+<parameter name="Reference tissue" value="Grey matter"/>
+<parameter name="EPI 2D phase correction" value="no"/>
+<parameter name="Recon compression" value="No"/>
+<parameter name="Preset window contrast" value="soft"/>
+<parameter name="Reconstruction mode" value="immediate"/>
+<parameter name="Save raw data" value="no"/>
+<parameter name="Hardcopy protocol" value="no"/>
+<parameter name="Image filter" value="system default"/>
+<parameter name="Geometry correction" value="default"/>
+</group>
+<group id="5" parameters="1028" name="Offc/Ang">
+<parameter name="Stacks" value="1"/>
+<parameter name="Stack Offc. AP (P=+mm)" value="-14.52906">
+<subparameter name="RL (L=+mm)" value="1.194492E-06"/>
+<subparameter name="FH (H=+mm)" value="0"/>
+<subparameter name="Ang.  AP (deg)" value="0"/>
+<subparameter name="RL (deg)" value="0"/>
+<subparameter name="FH (deg)" value="4.710512E-06"/>
+<subparameter name="Free rotatable" value="no"/>
+</parameter>
+</group>
+<group id="9" parameters="1028" name="Summary">
+<parameter name="FOV          RL (mm)" value="224">
+<subparameter name="AP (mm)" value="224"/>
+<subparameter name="FH (mm)" value="143"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="3.4375">
+<subparameter name="AP (mm)" value="3.5"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="5">
+<subparameter name="P reduction (AP)" value="2.3"/>
+</parameter>
+<parameter name="Stacks" value="1">
+<subparameter name="slices" value="24"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="1"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+</parameter>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="TE" value="shortest"/>
+<parameter name="Flip angle (deg)" value="90"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="5000"/>
+</parameter>
+<parameter name="Fat suppression" value="SPIR"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="PNS mode" value="low"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="10" parameters="1028" name="Physiology">
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="Multiphase ASL" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+</group>
+</protocol>
+<protocol id="PCASL_M0 On">
+<group id="n/a" parameters="106" name="InfoPage">
+<parameter name="Total scan duration" value="01:50.0"/>
+<parameter name="Rel. SNR" value="1"/>
+<parameter name="Act. TR/TE (ms)" value="10000 / 9.2"/>
+<parameter name="Dyn. scan time" value="00:10.0"/>
+<parameter name="Time to k0" value="00:05.0"/>
+<parameter name="ACQ matrix M x P" value="64 x 61"/>
+<parameter name="ACQ voxel MPS (mm)" value="3.50 / 3.63 / 5.00"/>
+<parameter name="REC voxel MPS (mm)" value="2.80 / 2.80 / 5.00"/>
+<parameter name="Scan percentage (%)" value="96.42857"/>
+<parameter name="Packages" value="1"/>
+<parameter name="Min. slice gap (mm)" value="0"/>
+<parameter name="EPI factor" value="27"/>
+<parameter name="Act. WFS (pix) / BW (Hz)" value="6.824 / 63.6"/>
+<parameter name="BW in EPI freq. dir. (Hz)" value="2696.3"/>
+<parameter name="Min. WFS (pix) / Max. BW (Hz)" value="6.824 / 63.6"/>
+<parameter name="Min. TR/TE (ms)" value="1001 / 9.2"/>
+<parameter name="SAR / local torso" value="&lt;  9 %"/>
+<parameter name="Whole body / level" value="&lt; 0.1 W/kg / normal"/>
+<parameter name="SED" value="  0.0 kJ/kg"/>
+<parameter name="B1+rms" value="0.49 uT"/>
+<parameter name="Max B1+rms" value="0.49 uT"/>
+<parameter name="PNS / level" value="59 % / normal"/>
+<parameter name="dB/dt" value="66.0 T/s"/>
+<parameter name="Sound Pressure Level (dB)" value="12.85965"/>
+</group>
+<group id="0" parameters="1028" name="Geometry">
+<parameter name="Nucleus" value="H1"/>
+<parameter name="Uniformity" value="CLEAR"/>
+<parameter name="FOV          RL (mm)" value="224">
+<subparameter name="AP (mm)" value="224"/>
+<subparameter name="FH (mm)" value="143"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="3.4375">
+<subparameter name="AP (mm)" value="3.5"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="5"/>
+<parameter name="Recon voxel size (mm)" value="2.8"/>
+<parameter name="Fold-over suppression" value="no"/>
+<parameter name="Reconstruction matrix" value="80"/>
+<parameter name="SENSE" value="yes">
+<subparameter name="P reduction (AP)" value="2.3"/>
+</parameter>
+<parameter name="k-t BLAST" value="no"/>
+<parameter name="Stacks" value="1">
+<subparameter name="type" value="parallel"/>
+<subparameter name="slices" value="24"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="1"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+<subparameter name="fat shift direction" value="P"/>
+</parameter>
+<parameter name="Minimum number of packages" value="1"/>
+<parameter name="Slice scan order" value="ascend"/>
+<parameter name="PlanAlign" value="no"/>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Catheter tracking" value="no"/>
+<parameter name="Interactive positioning" value="no"/>
+<parameter name="Allow table movement" value="no"/>
+</group>
+<group id="1" parameters="1028" name="Contrast">
+<parameter name="Scan type" value="Imaging"/>
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="Contrast enhancement" value="no"/>
+<parameter name="Acquisition mode" value="cartesian"/>
+<parameter name="Fast Imaging mode" value="EPI">
+<subparameter name="shot mode" value="single-shot"/>
+</parameter>
+<parameter name="Echoes" value="1">
+<subparameter name="partial echo" value="no"/>
+<subparameter name="shifted echo" value="no"/>
+</parameter>
+<parameter name="TE" value="shortest"/>
+<parameter name="Flip angle (deg)" value="90"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="10000"/>
+</parameter>
+<parameter name="Halfscan" value="no"/>
+<parameter name="Water-fat shift" value="maximum"/>
+<parameter name="Shim" value="auto"/>
+<parameter name="mDIXON" value="no"/>
+<parameter name="Fat suppression" value="SPIR">
+<subparameter name="strength" value="strong"/>
+<subparameter name="frequency offset" value="default"/>
+</parameter>
+<parameter name="Water suppression" value="no"/>
+<parameter name="MTC" value="no"/>
+<parameter name="Research prepulse" value="no"/>
+<parameter name="Diffusion mode" value="no"/>
+<parameter name="Elastography mode" value="no"/>
+<parameter name="Multi-transmit" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="B1 mode" value="default"/>
+<parameter name="SAR Patient data" value="auto"/>
+<parameter name="PNS mode" value="low"/>
+<parameter name="Gradient mode" value="default"/>
+<parameter name="SofTone mode" value="no"/>
+</group>
+<group id="2" parameters="1028" name="Motion">
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Heart rate &gt; 250 bpm" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+<parameter name="Flow compensation" value="no"/>
+<parameter name="Temporal slice spacing" value="default"/>
+<parameter name="fMRI echo stabilisation" value="no"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="3" parameters="1028" name="Dyn/Ang">
+<parameter name="Angio / Contrast enh." value="no"/>
+<parameter name="Quantitative flow" value="no"/>
+<parameter name="Manual start" value="no"/>
+<parameter name="+Abuse dynamic loop" value="no"/>
+<parameter name="Dynamic study" value="individual">
+<subparameter name="dyn scans" value="10"/>
+<subparameter name="recon multiplier" value="1"/>
+<subparameter name="dyn scan times" value="shortest"/>
+<subparameter name="fov time mode" value="default"/>
+<subparameter name="dummy scans" value="0"/>
+<subparameter name="immediate subtraction" value="no"/>
+<subparameter name="fast next scan" value="no"/>
+<subparameter name="synch. ext. device" value="no"/>
+<subparameter name="dyn stabilization" value="no"/>
+<subparameter name="prospect. motion corr." value="no"/>
+</parameter>
+<parameter name="Keyhole" value="no"/>
+<parameter name="Arterial Spin labeling" value="no"/>
+</group>
+<group id="4" parameters="1028" name="Postproc">
+<parameter name="Preparation phases" value="++sameprep"/>
+<parameter name="Interactive F0" value="no"/>
+<parameter name="SmartPlan survey" value="no"/>
+<parameter name="B0 field map" value="no"/>
+<parameter name="B1 field map" value="no"/>
+<parameter name="MIP/MPR" value="no"/>
+<parameter name="SWIp" value="no"/>
+<parameter name="Images" value="M, no, no, no"/>
+<parameter name="Autoview image" value="M"/>
+<parameter name="Calculated images" value="no, no, no, no"/>
+<parameter name="Reference tissue" value="Grey matter"/>
+<parameter name="EPI 2D phase correction" value="no"/>
+<parameter name="Recon compression" value="No"/>
+<parameter name="Preset window contrast" value="soft"/>
+<parameter name="Reconstruction mode" value="immediate"/>
+<parameter name="Save raw data" value="no"/>
+<parameter name="Hardcopy protocol" value="no"/>
+<parameter name="Image filter" value="system default"/>
+<parameter name="Geometry correction" value="default"/>
+</group>
+<group id="5" parameters="1028" name="Offc/Ang">
+<parameter name="Stacks" value="1"/>
+<parameter name="Stack Offc. AP (P=+mm)" value="-14.52906">
+<subparameter name="RL (L=+mm)" value="1.194492E-06"/>
+<subparameter name="FH (H=+mm)" value="0"/>
+<subparameter name="Ang.  AP (deg)" value="0"/>
+<subparameter name="RL (deg)" value="0"/>
+<subparameter name="FH (deg)" value="4.710512E-06"/>
+<subparameter name="Free rotatable" value="no"/>
+</parameter>
+</group>
+<group id="9" parameters="1028" name="Summary">
+<parameter name="FOV          RL (mm)" value="224">
+<subparameter name="AP (mm)" value="224"/>
+<subparameter name="FH (mm)" value="143"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="3.4375">
+<subparameter name="AP (mm)" value="3.5"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="5">
+<subparameter name="P reduction (AP)" value="2.3"/>
+</parameter>
+<parameter name="Stacks" value="1">
+<subparameter name="slices" value="24"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="1"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+</parameter>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="TE" value="shortest"/>
+<parameter name="Flip angle (deg)" value="90"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="10000"/>
+</parameter>
+<parameter name="Fat suppression" value="SPIR"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="PNS mode" value="low"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="10" parameters="1028" name="Physiology">
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="FFE"/>
+</parameter>
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+</group>
+</protocol>
+<protocol id="FLAIR_0.8mm On">
+<group id="n/a" parameters="106" name="InfoPage">
+<parameter name="Research Options used" value="6,23"/>
+<parameter name="Total scan duration" value="05:45.0"/>
+<parameter name="Rel. SNR" value="1"/>
+<parameter name="Act. TR/TI (ms)" value="5000 / 1600"/>
+<parameter name="Act. TE (ms)" value="427"/>
+<parameter name="ACQ matrix M x P" value="324 x 323"/>
+<parameter name="ACQ voxel MPS (mm)" value="0.80 / 0.80 / 1.60"/>
+<parameter name="REC voxel MPS (mm)" value="0.77 / 0.77 / 0.80"/>
+<parameter name="Scan percentage (%)" value="100"/>
+<parameter name="WFS (pix) / BW (Hz)" value="0.708 / 613.8"/>
+<parameter name="TSE es / shot (ms)" value="4.4 / 815"/>
+<parameter name="plateau / TEeff / TEequiv" value="394 / 427 / 170"/>
+<parameter name="Min. TR/TI (ms)" value="4930 / 50"/>
+<parameter name="SPAIR TR (ms)" value="5000"/>
+<parameter name="SPAIR inv. delay (ms)" value="220.00"/>
+<parameter name="SPAIR offset act./default (Hz)" value="100 [220]"/>
+<parameter name="SAR / local torso" value="&lt;  99 %"/>
+<parameter name="Whole body / level" value="&lt; 1.3 W/kg / normal"/>
+<parameter name="SED" value="&lt; 0.4 kJ/kg"/>
+<parameter name="B1+rms" value="1.61 uT"/>
+<parameter name="Max B1+rms" value="1.61 uT"/>
+<parameter name="PNS / level" value="56 % / normal"/>
+<parameter name="dB/dt" value="47.8 T/s"/>
+<parameter name="Sound Pressure Level (dB)" value="14.40909"/>
+</group>
+<group id="0" parameters="1028" name="Geometry">
+<parameter name="Nucleus" value="H1"/>
+<parameter name="Uniformity" value="CLEAR"/>
+<parameter name="FOV          RL (mm)" value="260">
+<subparameter name="AP (mm)" value="260"/>
+<subparameter name="FH (mm)" value="189.6"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="0.8">
+<subparameter name="AP (mm)" value="0.8038585"/>
+<subparameter name="FH (mm)" value="0.8"/>
+</parameter>
+<parameter name="Recon voxel size (mm)" value="0.7738096"/>
+<parameter name="Fold-over suppression" value="no"/>
+<parameter name="Slice oversampling" value="user defined">
+<subparameter name="oversample factor" value="1"/>
+</parameter>
+<parameter name="RF select. FOS" value="no"/>
+<parameter name="Reconstruction matrix" value="336"/>
+<parameter name="SENSE" value="yes">
+<subparameter name="P reduction (AP)" value="2.5"/>
+<subparameter name="S reduction (FH)" value="2"/>
+</parameter>
+<parameter name="k-t BLAST" value="no"/>
+<parameter name="Overcontiguous slices" value="yes"/>
+<parameter name="Stacks" value="1">
+<subparameter name="slices" value="237"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+<subparameter name="fat shift direction" value="L"/>
+</parameter>
+<parameter name="Multi-chunk" value="no"/>
+<parameter name="PlanAlign" value="no"/>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Catheter tracking" value="no"/>
+<parameter name="Interactive positioning" value="no"/>
+<parameter name="Allow table movement" value="no"/>
+</group>
+<group id="1" parameters="1028" name="Contrast">
+<parameter name="Scan type" value="Imaging"/>
+<parameter name="Scan mode" value="3D">
+<subparameter name="technique" value="IR"/>
+</parameter>
+<parameter name="Acquisition mode" value="cartesian"/>
+<parameter name="Fast Imaging mode" value="TSE">
+<subparameter name="3D VIEW" value="no"/>
+<subparameter name="shot mode" value="multishot"/>
+</parameter>
+<parameter name="TSE factor" value="178">
+<subparameter name="3D free factor" value="yes"/>
+<subparameter name="startup echoes" value="6"/>
+<subparameter name="profile order" value="linear"/>
+<subparameter name="turbo direction" value="Y"/>
+<subparameter name="DRIVE" value="no"/>
+<subparameter name="ultrashort" value="ultra"/>
+<subparameter name="fid reduction" value="default"/>
+<subparameter name="3D non-selective" value="yes"/>
+</parameter>
+<parameter name="Echoes" value="1">
+<subparameter name="partial echo" value="no"/>
+</parameter>
+<parameter name="TE" value="shortest"/>
+<parameter name="Refocusing control" value="tissue specific">
+<subparameter name="signal plateau" value="min. angle defined"/>
+<subparameter name="min. angle  (deg)" value="18"/>
+<subparameter name="max. angles (deg)" value="120, 160"/>
+</parameter>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="5000"/>
+</parameter>
+<parameter name="Halfscan" value="no"/>
+<parameter name="Water-fat shift" value="maximum"/>
+<parameter name="IR  delay (ms)" value="1600">
+<subparameter name="dual" value="no"/>
+<subparameter name="power" value="1"/>
+</parameter>
+<parameter name="Shim" value="default"/>
+<parameter name="mDIXON" value="no"/>
+<parameter name="Fat suppression" value="SPAIR">
+<subparameter name="power" value="1"/>
+<subparameter name="inversion delay (ms)" value="220"/>
+<subparameter name="frequency offset" value="user defined"/>
+<subparameter name="offset (Hz)" value="100"/>
+</parameter>
+<parameter name="Grad Rev Fat suppression" value="no"/>
+<parameter name="Water suppression" value="no"/>
+<parameter name="MTC" value="no"/>
+<parameter name="T2prep" value="yes">
+<subparameter name="echo time (ms)" value="125"/>
+<subparameter name="refocusing pulses" value="4"/>
+<subparameter name="flow venc (cm/s)" value="0, 0, 0"/>
+</parameter>
+<parameter name="Research prepulse" value="no"/>
+<parameter name="Zoom imaging" value="no"/>
+<parameter name="Diffusion mode" value="no"/>
+<parameter name="Elastography mode" value="no"/>
+<parameter name="Multi-transmit" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="B1 mode" value="default"/>
+<parameter name="SAR Patient data" value="auto"/>
+<parameter name="PNS mode" value="high"/>
+<parameter name="Gradient mode" value="default"/>
+<parameter name="SofTone mode" value="no"/>
+</group>
+<group id="2" parameters="1028" name="Motion">
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Heart rate &gt; 250 bpm" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+<parameter name="Flow compensation" value="no"/>
+<parameter name="Motion smoothing" value="no"/>
+<parameter name="NSA" value="2">
+<subparameter name="partial NSA" value="no"/>
+</parameter>
+<parameter name="SMART" value="no"/>
+</group>
+<group id="3" parameters="1028" name="Dyn/Ang">
+<parameter name="CENTRA" value="no"/>
+<parameter name="Manual start" value="no"/>
+<parameter name="+Abuse dynamic loop" value="no"/>
+<parameter name="Dynamic study" value="no"/>
+<parameter name="Arterial Spin labeling" value="no"/>
+</group>
+<group id="4" parameters="1028" name="Postproc">
+<parameter name="Preparation phases" value="auto"/>
+<parameter name="Interactive F0" value="no"/>
+<parameter name="SmartPlan survey" value="no"/>
+<parameter name="B0 field map" value="no"/>
+<parameter name="B1 field map" value="no"/>
+<parameter name="MIP/MPR" value="no"/>
+<parameter name="Images" value="M, no, no, no"/>
+<parameter name="Autoview image" value="M"/>
+<parameter name="Reference tissue" value="Grey matter"/>
+<parameter name="Recon compression" value="No"/>
+<parameter name="Preset window contrast" value="soft"/>
+<parameter name="Reconstruction mode" value="real time"/>
+<parameter name="Save raw data" value="no"/>
+<parameter name="Hardcopy protocol" value="no"/>
+<parameter name="Image filter" value="system default"/>
+<parameter name="Geometry correction" value="default"/>
+<parameter name="Elliptical k-space shutter" value="default"/>
+</group>
+<group id="5" parameters="1028" name="Offc/Ang">
+<parameter name="Stacks" value="1"/>
+<parameter name="Stack Offc. AP (P=+mm)" value="-14.52906">
+<subparameter name="RL (L=+mm)" value="1.194492E-06"/>
+<subparameter name="FH (H=+mm)" value="0"/>
+<subparameter name="Ang.  AP (deg)" value="0"/>
+<subparameter name="RL (deg)" value="0"/>
+<subparameter name="FH (deg)" value="4.710512E-06"/>
+<subparameter name="Free rotatable" value="no"/>
+</parameter>
+</group>
+<group id="9" parameters="1028" name="Summary">
+<parameter name="FOV          RL (mm)" value="260">
+<subparameter name="AP (mm)" value="260"/>
+<subparameter name="FH (mm)" value="189.6"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="0.8">
+<subparameter name="AP (mm)" value="0.8038585"/>
+<subparameter name="FH (mm)" value="0.8"/>
+<subparameter name="P reduction (AP)" value="2.5"/>
+<subparameter name="S reduction (FH)" value="2"/>
+</parameter>
+<parameter name="Stacks" value="1">
+<subparameter name="slices" value="237"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+</parameter>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Scan mode" value="3D">
+<subparameter name="technique" value="IR"/>
+</parameter>
+<parameter name="TE" value="shortest"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="5000"/>
+</parameter>
+<parameter name="Fat suppression" value="SPAIR"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="PNS mode" value="high"/>
+<parameter name="NSA" value="2"/>
+</group>
+<group id="10" parameters="1028" name="Physiology">
+<parameter name="Scan mode" value="3D">
+<subparameter name="technique" value="IR"/>
+</parameter>
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+</group>
+</protocol>
+<protocol id="DTI64_b2000_BlipP On">
+<group id="n/a" parameters="106" name="InfoPage">
+<parameter name="Total scan duration" value="12:22.6"/>
+<parameter name="Rel. SNR" value="1"/>
+<parameter name="Act. TR (ms)" value="8300"/>
+<parameter name="Act. TE (ms)" value="88"/>
+<parameter name="ACQ matrix M x P" value="128 x 126"/>
+<parameter name="ACQ voxel MPS (mm)" value="2.00 / 2.03 / 2.00"/>
+<parameter name="REC voxel MPS (mm)" value="2.00 / 2.00 / 2.00"/>
+<parameter name="Scan percentage (%)" value="98.4375"/>
+<parameter name="Packages" value="1"/>
+<parameter name="Min. slice gap (mm)" value="0"/>
+<parameter name="Diffusion gradient timing  DELTA / delta (ms)" value="43.2 / 31.3"/>
+<parameter name="User defined DTI scheme" value="64dirb2000+4b0 (68, 2000)"/>
+<parameter name="EPI factor" value="63"/>
+<parameter name="WFS (pix) / BW (Hz)" value="18.661 / 23.3"/>
+<parameter name="BW in EPI freq. dir. (Hz)" value="2375.0"/>
+<parameter name="Min. TR (ms)" value="8239"/>
+<parameter name="SAR / local torso" value="&lt;  62 %"/>
+<parameter name="Whole body / level" value="&lt; 0.8 W/kg / normal"/>
+<parameter name="SED" value="&lt; 0.6 kJ/kg"/>
+<parameter name="B1+rms" value="1.27 uT"/>
+<parameter name="Max B1+rms" value="1.27 uT"/>
+<parameter name="PNS / level" value="80 % / normal"/>
+<parameter name="dB/dt" value="43.6 T/s"/>
+<parameter name="Sound Pressure Level (dB)" value="16.85569"/>
+</group>
+<group id="8" parameters="1028" name="Conflicts">
+<subparameter name="AP (mm)" value="256"/>
+<parameter name="Voxel size   RL (mm)" value="2">
+<subparameter name="AP (mm)" value="2"/>
+</parameter>
+<parameter name="Recon voxel size (mm)" value="2"/>
+<parameter name="Reconstruction matrix" value="128">
+<subparameter name="slices" value="66"/>
+<subparameter name="directional resolution" value="from file"/>
+</parameter>
+</group>
+<group id="0" parameters="1028" name="Geometry">
+<parameter name="Nucleus" value="H1"/>
+<parameter name="Uniformity" value="CLEAR"/>
+<parameter name="FOV          RL (mm)" value="256">
+<subparameter name="AP (mm)" value="256"/>
+<subparameter name="FH (mm)" value="132"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="2">
+<subparameter name="AP (mm)" value="2"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="2"/>
+<parameter name="Recon voxel size (mm)" value="2"/>
+<parameter name="Small FOV imaging" value="no"/>
+<parameter name="Fold-over suppression" value="no"/>
+<parameter name="Reconstruction matrix" value="128"/>
+<parameter name="SENSE" value="yes">
+<subparameter name="P reduction (AP)" value="2"/>
+</parameter>
+<parameter name="k-t BLAST" value="no"/>
+<parameter name="Stacks" value="1">
+<subparameter name="type" value="parallel"/>
+<subparameter name="slices" value="66"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="0"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+<subparameter name="fat shift direction" value="P"/>
+</parameter>
+<parameter name="Minimum number of packages" value="1"/>
+<parameter name="Slice scan order" value="default"/>
+<parameter name="PlanAlign" value="no"/>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Catheter tracking" value="no"/>
+<parameter name="Interactive positioning" value="no"/>
+<parameter name="Allow table movement" value="no"/>
+</group>
+<group id="1" parameters="1028" name="Contrast">
+<parameter name="Scan type" value="Imaging"/>
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="SE"/>
+</parameter>
+<parameter name="Modified SE" value="no"/>
+<parameter name="Acquisition mode" value="cartesian"/>
+<parameter name="Fast Imaging mode" value="EPI">
+<subparameter name="shot mode" value="single-shot"/>
+</parameter>
+<parameter name="Echoes" value="1">
+<subparameter name="partial echo" value="no"/>
+</parameter>
+<parameter name="TE" value="user defined">
+<subparameter name="(ms)" value="88"/>
+</parameter>
+<parameter name="Flip angle (deg)" value="90"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="8300"/>
+</parameter>
+<parameter name="Halfscan" value="yes">
+<subparameter name="factor" value="0.6119403"/>
+</parameter>
+<parameter name="Water-fat shift" value="minimum"/>
+<parameter name="Shim" value="auto"/>
+<parameter name="mDIXON" value="no"/>
+<parameter name="Fat suppression" value="SPIR">
+<subparameter name="strength" value="strong"/>
+<subparameter name="frequency offset" value="default"/>
+</parameter>
+<parameter name="Grad Rev Fat suppression" value="yes"/>
+<parameter name="Water suppression" value="no"/>
+<parameter name="BB pulse" value="no"/>
+<parameter name="MTC" value="no"/>
+<parameter name="Research prepulse" value="no"/>
+<parameter name="Diffusion mode" value="DTI">
+<subparameter name="sequence" value="SE"/>
+<subparameter name="gradient duration" value="maximum"/>
+<subparameter name="gradient overplus" value="no"/>
+<subparameter name="directional resolution" value="from file"/>
+<subparameter name="average high b" value="no"/>
+</parameter>
+<parameter name="Elastography mode" value="no"/>
+<parameter name="Multi-transmit" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="B1 mode" value="default"/>
+<parameter name="SAR Patient data" value="auto"/>
+<parameter name="PNS mode" value="moderate"/>
+<parameter name="Gradient mode" value="maximum"/>
+<parameter name="SofTone mode" value="no"/>
+</group>
+<group id="2" parameters="1028" name="Motion">
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Heart rate &gt; 250 bpm" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+<parameter name="Flow compensation" value="no"/>
+<parameter name="Temporal slice spacing" value="minimal"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="3" parameters="1028" name="Dyn/Ang">
+<parameter name="Manual start" value="no"/>
+<parameter name="+Abuse dynamic loop" value="no"/>
+<parameter name="Dynamic study" value="no">
+<subparameter name="dyn stabilization" value="regular"/>
+</parameter>
+<parameter name="Arterial Spin labeling" value="no"/>
+</group>
+<group id="4" parameters="1028" name="Postproc">
+<parameter name="Preparation phases" value="auto"/>
+<parameter name="Interactive F0" value="no"/>
+<parameter name="SmartPlan survey" value="no"/>
+<parameter name="B0 field map" value="no"/>
+<parameter name="B1 field map" value="no"/>
+<parameter name="MIP/MPR" value="no"/>
+<parameter name="Images" value="M, no, no, no"/>
+<parameter name="Autoview image" value="M"/>
+<parameter name="Calculated images" value="no, no, no, no"/>
+<parameter name="Reference tissue" value="White matter"/>
+<parameter name="EPI 2D phase correction" value="no"/>
+<parameter name="Recon compression" value="No"/>
+<parameter name="Preset window contrast" value="soft"/>
+<parameter name="Reconstruction mode" value="immediate"/>
+<parameter name="Save raw data" value="no"/>
+<parameter name="Hardcopy protocol" value="no"/>
+<parameter name="Image filter" value="system default"/>
+<parameter name="Geometry correction" value="none"/>
+</group>
+<group id="5" parameters="1028" name="Offc/Ang">
+<parameter name="Stacks" value="1"/>
+<parameter name="Stack Offc. AP (P=+mm)" value="-22.03815">
+<subparameter name="RL (L=+mm)" value="0.04564861"/>
+<subparameter name="FH (H=+mm)" value="9.707975"/>
+<subparameter name="Ang.  AP (deg)" value="0"/>
+<subparameter name="RL (deg)" value="0"/>
+<subparameter name="FH (deg)" value="0"/>
+<subparameter name="Free rotatable" value="yes"/>
+</parameter>
+</group>
+<group id="9" parameters="1028" name="Summary">
+<parameter name="FOV          RL (mm)" value="256">
+<subparameter name="AP (mm)" value="256"/>
+<subparameter name="FH (mm)" value="132"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="2">
+<subparameter name="AP (mm)" value="2"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="2">
+<subparameter name="P reduction (AP)" value="2"/>
+</parameter>
+<parameter name="Stacks" value="1">
+<subparameter name="slices" value="66"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="0"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+</parameter>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="SE"/>
+</parameter>
+<parameter name="TE" value="user defined">
+<subparameter name="(ms)" value="88"/>
+</parameter>
+<parameter name="Flip angle (deg)" value="90"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="8300"/>
+</parameter>
+<parameter name="Fat suppression" value="SPIR"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="PNS mode" value="moderate"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="10" parameters="1028" name="Physiology">
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="SE"/>
+</parameter>
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+</group>
+</protocol>
+<protocol id="DTI4_b0_BlipA On">
+<group id="n/a" parameters="106" name="InfoPage">
+<parameter name="Total scan duration" value="01:22.7"/>
+<parameter name="Rel. SNR" value="1"/>
+<parameter name="Act. TR (ms)" value="8300"/>
+<parameter name="Act. TE (ms)" value="88"/>
+<parameter name="ACQ matrix M x P" value="128 x 126"/>
+<parameter name="ACQ voxel MPS (mm)" value="2.00 / 2.03 / 2.00"/>
+<parameter name="REC voxel MPS (mm)" value="2.00 / 2.00 / 2.00"/>
+<parameter name="Scan percentage (%)" value="98.4375"/>
+<parameter name="Packages" value="1"/>
+<parameter name="Min. slice gap (mm)" value="0"/>
+<parameter name="Diffusion gradient timing  DELTA / delta (ms)" value="43.2 / 31.3"/>
+<parameter name="User defined DTI scheme" value="4b1 (4, 0)"/>
+<parameter name="EPI factor" value="63"/>
+<parameter name="WFS (pix) / BW (Hz)" value="18.661 / 23.3"/>
+<parameter name="BW in EPI freq. dir. (Hz)" value="2375.0"/>
+<parameter name="Min. TR (ms)" value="8239"/>
+<parameter name="SAR / local torso" value="&lt;  62 %"/>
+<parameter name="Whole body / level" value="&lt; 0.8 W/kg / normal"/>
+<parameter name="SED" value="&lt; 0.1 kJ/kg"/>
+<parameter name="B1+rms" value="1.27 uT"/>
+<parameter name="Max B1+rms" value="1.27 uT"/>
+<parameter name="PNS / level" value="80 % / normal"/>
+<parameter name="dB/dt" value="43.6 T/s"/>
+<parameter name="Sound Pressure Level (dB)" value="16.64768"/>
+</group>
+<group id="0" parameters="1028" name="Geometry">
+<parameter name="Nucleus" value="H1"/>
+<parameter name="Uniformity" value="CLEAR"/>
+<parameter name="FOV          RL (mm)" value="256">
+<subparameter name="AP (mm)" value="256"/>
+<subparameter name="FH (mm)" value="132"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="2">
+<subparameter name="AP (mm)" value="2"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="2"/>
+<parameter name="Recon voxel size (mm)" value="2"/>
+<parameter name="Small FOV imaging" value="no"/>
+<parameter name="Fold-over suppression" value="no"/>
+<parameter name="Reconstruction matrix" value="128"/>
+<parameter name="SENSE" value="yes">
+<subparameter name="P reduction (AP)" value="2"/>
+</parameter>
+<parameter name="k-t BLAST" value="no"/>
+<parameter name="Stacks" value="1">
+<subparameter name="type" value="parallel"/>
+<subparameter name="slices" value="66"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="0"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+<subparameter name="fat shift direction" value="A"/>
+</parameter>
+<parameter name="Minimum number of packages" value="1"/>
+<parameter name="Slice scan order" value="default"/>
+<parameter name="PlanAlign" value="no"/>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Catheter tracking" value="no"/>
+<parameter name="Interactive positioning" value="no"/>
+<parameter name="Allow table movement" value="no"/>
+</group>
+<group id="1" parameters="1028" name="Contrast">
+<parameter name="Scan type" value="Imaging"/>
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="SE"/>
+</parameter>
+<parameter name="Modified SE" value="no"/>
+<parameter name="Acquisition mode" value="cartesian"/>
+<parameter name="Fast Imaging mode" value="EPI">
+<subparameter name="shot mode" value="single-shot"/>
+</parameter>
+<parameter name="Echoes" value="1">
+<subparameter name="partial echo" value="no"/>
+</parameter>
+<parameter name="TE" value="user defined">
+<subparameter name="(ms)" value="88"/>
+</parameter>
+<parameter name="Flip angle (deg)" value="90"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="8300"/>
+</parameter>
+<parameter name="Halfscan" value="yes">
+<subparameter name="factor" value="0.6119403"/>
+</parameter>
+<parameter name="Water-fat shift" value="minimum"/>
+<parameter name="Shim" value="auto"/>
+<parameter name="mDIXON" value="no"/>
+<parameter name="Fat suppression" value="SPIR">
+<subparameter name="strength" value="strong"/>
+<subparameter name="frequency offset" value="default"/>
+</parameter>
+<parameter name="Grad Rev Fat suppression" value="yes"/>
+<parameter name="Water suppression" value="no"/>
+<parameter name="BB pulse" value="no"/>
+<parameter name="MTC" value="no"/>
+<parameter name="Research prepulse" value="no"/>
+<parameter name="Diffusion mode" value="DTI">
+<subparameter name="sequence" value="SE"/>
+<subparameter name="gradient duration" value="maximum"/>
+<subparameter name="gradient overplus" value="no"/>
+<subparameter name="directional resolution" value="from file"/>
+<subparameter name="average high b" value="no"/>
+</parameter>
+<parameter name="Elastography mode" value="no"/>
+<parameter name="Multi-transmit" value="no"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="B1 mode" value="default"/>
+<parameter name="SAR Patient data" value="auto"/>
+<parameter name="PNS mode" value="moderate"/>
+<parameter name="Gradient mode" value="maximum"/>
+<parameter name="SofTone mode" value="no"/>
+</group>
+<group id="2" parameters="1028" name="Motion">
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Heart rate &gt; 250 bpm" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+<parameter name="Flow compensation" value="no"/>
+<parameter name="Temporal slice spacing" value="minimal"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="3" parameters="1028" name="Dyn/Ang">
+<parameter name="Manual start" value="no"/>
+<parameter name="+Abuse dynamic loop" value="no"/>
+<parameter name="Dynamic study" value="no">
+<subparameter name="dyn stabilization" value="regular"/>
+</parameter>
+<parameter name="Arterial Spin labeling" value="no"/>
+</group>
+<group id="4" parameters="1028" name="Postproc">
+<parameter name="Preparation phases" value="++sameprep"/>
+<parameter name="Interactive F0" value="no"/>
+<parameter name="SmartPlan survey" value="no"/>
+<parameter name="B0 field map" value="no"/>
+<parameter name="B1 field map" value="no"/>
+<parameter name="MIP/MPR" value="no"/>
+<parameter name="Images" value="M, no, no, no"/>
+<parameter name="Autoview image" value="M"/>
+<parameter name="Calculated images" value="no, no, no, no"/>
+<parameter name="Reference tissue" value="White matter"/>
+<parameter name="EPI 2D phase correction" value="no"/>
+<parameter name="Recon compression" value="No"/>
+<parameter name="Preset window contrast" value="soft"/>
+<parameter name="Reconstruction mode" value="immediate"/>
+<parameter name="Save raw data" value="no"/>
+<parameter name="Hardcopy protocol" value="no"/>
+<parameter name="Image filter" value="system default"/>
+<parameter name="Geometry correction" value="none"/>
+</group>
+<group id="5" parameters="1028" name="Offc/Ang">
+<parameter name="Stacks" value="1"/>
+<parameter name="Stack Offc. AP (P=+mm)" value="-22.03815">
+<subparameter name="RL (L=+mm)" value="0.04564861"/>
+<subparameter name="FH (H=+mm)" value="9.707975"/>
+<subparameter name="Ang.  AP (deg)" value="0"/>
+<subparameter name="RL (deg)" value="0"/>
+<subparameter name="FH (deg)" value="0"/>
+<subparameter name="Free rotatable" value="yes"/>
+</parameter>
+</group>
+<group id="9" parameters="1028" name="Summary">
+<parameter name="FOV          RL (mm)" value="256">
+<subparameter name="AP (mm)" value="256"/>
+<subparameter name="FH (mm)" value="132"/>
+</parameter>
+<parameter name="Voxel size   RL (mm)" value="2">
+<subparameter name="AP (mm)" value="2"/>
+</parameter>
+<parameter name="Slice thickness (mm)" value="2">
+<subparameter name="P reduction (AP)" value="2"/>
+</parameter>
+<parameter name="Stacks" value="1">
+<subparameter name="slices" value="66"/>
+<subparameter name="slice gap" value="user defined"/>
+<subparameter name="gap (mm)" value="0"/>
+<subparameter name="slice orientation" value="transverse"/>
+<subparameter name="fold-over direction" value="AP"/>
+</parameter>
+<parameter name="REST slabs" value="0"/>
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="SE"/>
+</parameter>
+<parameter name="TE" value="user defined">
+<subparameter name="(ms)" value="88"/>
+</parameter>
+<parameter name="Flip angle (deg)" value="90"/>
+<parameter name="TR" value="user defined">
+<subparameter name="(ms)" value="8300"/>
+</parameter>
+<parameter name="Fat suppression" value="SPIR"/>
+<parameter name="SAR mode" value="high"/>
+<parameter name="PNS mode" value="moderate"/>
+<parameter name="NSA" value="1"/>
+</group>
+<group id="10" parameters="1028" name="Physiology">
+<parameter name="Scan mode" value="MS">
+<subparameter name="technique" value="SE"/>
+</parameter>
+<parameter name="Cardiac synchronization" value="no"/>
+<parameter name="Respiratory compensation" value="no"/>
+<parameter name="Navigator respiratory comp" value="no"/>
+</group>
+</protocol>
+</examcard>
+<folder id="Head CNS">
+<folder id="DYN"/>
+<folder id="SWIp"/>
+<folder id="FO_SUP"/>
+</folder>
+<folder id="Abdomen">
+<folder id="Safety"/>
+</folder>
+<folder id="Pelvis">
+<folder id="autospair"/>
+</folder>
+<folder id="{B1860723-4F8F-476e-8075-D42C65706693}">
+<folder id="InBox"/>
+</folder>
+</folder>
+</dump>

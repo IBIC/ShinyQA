@@ -1,0 +1,65 @@
+#! /bin/bash
+
+TEMPLATEDIR=/mnt/panuc/IBIC_Pipelines/ShinyQA
+PROJECTDIR=/mnt/panuc/udallp2
+
+usage()
+{
+    echo "Usage: `basename $0` <subject id> <session no> <task>"
+    echo
+    echo "<subject id> format must be numbers only: e.g. 100044 or 100054"
+    echo
+    echo "<session no> should be a single number: e.g. 1 or 2"
+    echo
+    echo "<task> should be either one of these: rest-on, rest-off, axcpt-on, axcpt-off"
+    echo
+}
+
+if [ $# -lt 3 ]; then
+	echo
+	echo   "./generate_rmds <subject id> <session no> <task>"
+	echo   "e.g. ./generate_rmds 100044 1 rest-on"
+	echo
+	exit
+fi
+
+SUBID=$1
+NO=$2
+TASK=$3
+
+# parrec
+if [ -f ${PROJECTDIR}/subjects/${SUBID}/session${NO}/QA/${TASK}_parrec.Rmd ]; then
+    rm ${PROJECTDIR}/subjects/${SUBID}/session${NO}/QA/${TASK}_parrec.Rmd
+fi
+cp ${TEMPLATEDIR}/TASK_parrec.Rmd  ${PROJECTDIR}/subjects/${SUBID}/session${NO}/QA/${TASK}_parrec.Rmd
+cd ${PROJECTDIR}/subjects/${SUBID}/session${NO}/QA
+sed -i "s~PROJECTDIR~$PROJECTDIR~g" ${TASK}_parrec.Rmd 
+sed -i "s/SUBID/$SUBID/g" ${TASK}_parrec.Rmd 
+sed -i "s/NO/$NO/g" ${TASK}_parrec.Rmd 
+sed -i "s/TASK/$TASK/g" ${TASK}_parrec.Rmd
+
+# motion
+if [ -f ${PROJECTDIR}/subjects/${SUBID}/session${NO}/QA/${TASK}_motion.Rmd ]; then
+    rm ${PROJECTDIR}/subjects/${SUBID}/session${NO}/QA/${TASK}_motion.Rmd
+fi
+cp ${TEMPLATEDIR}/TASK_motion.Rmd  ${PROJECTDIR}/subjects/${SUBID}/session${NO}/QA/${TASK}_motion.Rmd
+cd  ${PROJECTDIR}/subjects/${SUBID}/session${NO}/QA
+sed -i "s~PROJECTDIR~$PROJECTDIR~g" ${TASK}_motion.Rmd 
+sed -i "s/SUBID/$SUBID/g" ${TASK}_motion.Rmd 
+sed -i "s/NO/$NO/g" ${TASK}_motion.Rmd 
+sed -i "s/TASK/$TASK/g" ${TASK}_motion.Rmd
+
+# warning
+if [ -f ${PROJECTDIR}/subjects/${SUBID}/session${NO}/QA/${TASK}_warning.Rmd ]; then
+    rm ${PROJECTDIR}/subjects/${SUBID}/session${NO}/QA/${TASK}_warning.Rmd
+fi
+cp ${TEMPLATEDIR}/TASK_warning.Rmd  ${PROJECTDIR}/subjects/${SUBID}/session${NO}/QA/${TASK}_warning.Rmd
+cd  ${PROJECTDIR}/subjects/${SUBID}/session${NO}/QA
+sed -i "s~PROJECTDIR~$PROJECTDIR~g" ${TASK}_warning.Rmd 
+sed -i "s/SUBID/$SUBID/g" ${TASK}_warning.Rmd 
+sed -i "s/NO/$NO/g" ${TASK}_warning.Rmd 
+sed -i "s/TASK/$TASK/g" ${TASK}_warning.Rmd
+
+# copy and rename parrecs
+
+# generate numvols file for each task

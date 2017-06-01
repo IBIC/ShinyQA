@@ -1,0 +1,78 @@
+---
+title:
+runtime: shiny
+output: html_document
+keep_md: no
+---
+
+```{r engine='bash', echo=FALSE}
+skullstripDICE=`grep 'value="' PROJECTDIR/subjects/SUBID/sessionNO/mprage/skullstripDICE | awk '{print $7}' | grep -o '[0-9].[0-9]*'`
+
+if [ `cat PROJECTDIR/subjects/SUBID/sessionNO/0_group` == "CONTROL" ]; then
+   rest-on_regDICE=`grep 'value="' PROJECTDIR/subjects/SUBID/sessionNO/rest-on/rest-on_regDICE | awk '{print $7}' | grep -o '[0-9].[0-9]*'`
+   axcpt-on_regDICE=`grep 'value="' PROJECTDIR/subjects/SUBID/sessionNO/axcpt-on/axcpt-on_regDICE | awk '{print $7}' | grep -o '[0-9].[0-9]*'`
+else
+   rest-on_regDICE=`grep 'value="' PROJECTDIR/subjects/SUBID/sessionNO/rest-on/rest-on_regDICE | awk '{print $7}' | grep -o '[0-9].[0-9]*'`
+   axcpt-on_regDICE=`grep 'value="' PROJECTDIR/subjects/SUBID/sessionNO/axcpt-on/axcpt-on_regDICE | awk '{print $7}' | grep -o '[0-9].[0-9]*'`
+   rest-off_regDICE=`grep 'value="' PROJECTDIR/subjects/SUBID/sessionNO/rest-off/rest-off_regDICE | awk '{print $7}' | grep -o '[0-9].[0-9]*'`
+   axcpt-off_regDICE=`grep 'value="' PROJECTDIR/subjects/SUBID/sessionNO/axcpt-off/axcpt-off_regDICE | awk '{print $7}' | grep -o '[0-9].[0-9]*'`
+fi
+```
+
+```{r, results = "hide", echo = FALSE}
+skullstrip.warn <- if (DICE < 0.9) {print("check skullstrip")}
+rest-on_reg.warn <- if (rest-on_regDICE < 0.75) {print("check rest-on registration")}
+rest-off_reg.warn <- if (rest-off_regDICE < 0.75) {print("check rest-off registration")}
+axcpt-on_reg.warn <- if (axcpt-on_regDICE < 0.75) {print("check axcpt-on registration")}
+axcpt-off_reg.warn <- if (axcpt-off_regDICE < 0.75) {print("check axcpt-off registration")}
+
+absdisp <- as.numeric(read.csv("PROJECTDIR/subjects/SUBID/sessionNO/mcflirt_data/TASK_data_abs_mean.rms", header = FALSE))
+absdisp.warn <- if (absdisp > 2) {print("abs disp above threshold")}
+
+totaloutliers <- nrow(as.data.frame(read.csv("PROJECTDIR/subjects/SUBID/sessionNO/TASK/SUBID_all_outliers.txt", header = FALSE)))
+numvols <- as.numeric(read.csv("PROJECTDIR/subjects/SUBID/sessionNO/TASK/TASK_numvols", header = FALSE))
+percent.outliers <- totaloutliers / numvols
+percent.warn <- if (percent.outliers > 10) {print("percent outliers above threshold")}
+
+fdvals_e002 <- as.data.frame(read.csv("PROJECTDIR/subjects/SUBID/sessionNO/TASK/TASK_e002_fd_vals", header = FALSE))
+fdvals_tsoc <- as.data.frame(read.csv("PROJECTDIR/subjects/SUBID/sessionNO/TASK/TASK_e00213_tsoc_fd_vals", header = FALSE))
+fdvals_medn <- as.data.frame(read.csv("PROJECTDIR/subjects/SUBID/sessionNO/TASK/TASK_e00213_medn_fd_vals", header = FALSE))
+
+fdvals_e002_mean <- mean(fdvals_e002[,1])
+fdvals_tsoc_mean <- mean(fdvals_tsoc[,1])
+fdvals_medn_mean <- mean(fdvals_medn[,1])
+
+fd.warn.e002 <- if (fdvals_e002_mean > 0.5) {print("mean FD value above threshold for e002")}
+fd.warn.tsoc <- if (fdvals_tsoc_mean > 0.5) {print("mean FD value above threshold for tsoc")}
+fd.warn.medn <- if (fdvals_medn_mean > 0.5) {print("mean FD value above threshold for medn")}
+
+dvarsvals_e002 <- as.data.frame(read.csv("PROJECTDIR/subjects/SUBID/sessionNO/TASK/TASK_e002_dvars_vals", header = FALSE))
+dvarsvals_tsoc <- as.data.frame(read.csv("PROJECTDIR/subjects/SUBID/sessionNO/TASK/TASK_e00213_tsoc_dvars_vals", header = FALSE))
+dvarsvals_medn <- as.data.frame(read.csv("PROJECTDIR/subjects/SUBID/sessionNO/TASK/TASK_e00213_medn_dvars_vals", header = FALSE))
+dvars_e002_thresh <- as.data.frame(read.csv("PROJECTDIR/subjects/SUBID/sessionNO/TASK/TASK_e002_dvars_thresh", header = FALSE))
+dvars_tsoc_thresh <- as.data.frame(read.csv("PROJECTDIR/subjects/SUBID/sessionNO/TASK/TASK_e00213_tsoc_dvars_thresh", header = FALSE))
+dvars_medn_thresh <- as.data.frame(read.csv("PROJECTDIR/subjects/SUBID/sessionNO/TASK/TASK_e00213_medn_dvars_thresh", header = FALSE))
+
+dvarsvals_e002_mean <- mean(dvarsvals_e002[,1])
+dvarsvals_tsoc_mean <- mean(dvarsvals_tsoc[,1])
+dvarsvals_medn_mean <- mean(dvarsvals_medn[,1])
+
+dvars.warn.e002 <- if (dvarsvals_e002_mean > dvars_e002_thresh) {print("mean DVARS value above threshold for e002")}
+dvars.warn.tsoc <- if (dvarsvals_tsoc_mean > dvars_tsoc_thresh) {print("mean DVARS value above threshold for tsoc")}
+dvars.warn.medn <- if (dvarsvals_medn_mean > dvars_medn_thresh) {print("mean DVARS value above threshold for medn")}
+
+```
+<span style="color:red">`r skullstrip.warn`</span><br>
+<span style="color:red">`r rest-on_reg.warn`</span><br>
+<span style="color:red">`r rest-off_reg.warn`</span><br>
+<span style="color:red">`r axcpt-on_reg.warn`</span><br>
+<span style="color:red">`r axcpt-off_reg.warn`</span><br>
+<span style="color:red">`r absdisp.warn`</span><br>
+<span style="color:red">`r percent.warn`</span><br>
+<span style="color:red">`r fd.warn.e002`</span><br>
+<span style="color:red">`r fd.warn.tsoc`</span><br>
+<span style="color:red">`r fd.warn.medn`</span><br>
+<span style="color:red">`r dvars.warn.e002`</span><br>
+<span style="color:red">`r dvars.warn.tsoc`</span><br>
+<span style="color:red">`r dvars.warn.medn`</span><br>
+

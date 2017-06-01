@@ -1,0 +1,29 @@
+---
+title:
+runtime: shiny
+output: html_document
+keep_md: yes
+---
+
+```{r, results = "hide", echo = FALSE}
+absdisp <- as.numeric(read.csv("quantmeasures/rest-on_data_abs_mean.rms", header = FALSE))
+absdisp.warn <- if (absdisp < 2) {print("abs disp below threshold")}
+
+totaloutliers <- nrow(as.data.frame(read.csv("quantmeasures/rest-on_all_outliers.txt", header = FALSE)))
+numvols <- as.numeric(read.csv("numvols", header = FALSE))
+percent.outliers <- totaloutliers / numvols
+percent.warn <- if (percent.outliers > 10) {print("percent outliers above threshold")}
+
+fdvals_e002 <- as.data.frame(read.csv("quantmeasures/rest-on_e002_fd_vals", header = FALSE))
+fdvals_tsoc <- as.data.frame(read.csv("quantmeasures/rest-on_e00213_tsoc_fd_vals", header = FALSE))
+fdvals_medn <- as.data.frame(read.csv("quantmeasures/rest-on_e00213_medn_fd_vals", header = FALSE))
+
+fdvals_e002_mean <- mean(fdvals_e002[,1])
+fdvals_tsoc_mean <- mean(fdvals_tsoc[,1])
+fdvals_medn_mean <- mean(fdvals_medn[,1])
+
+```
+* <span style="color:red">`r absdisp.warn`</span>
+* <span style="color:red">`r percent.warn`</span>
+
+
