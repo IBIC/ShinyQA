@@ -54,6 +54,7 @@ function(input, output, session) {
     conn <- file(file_path)
     subjects <- readLines(conn)
     on.exit(close(conn))
+    subjects <- c("100023", "100044", "100054", "100089", "100157")
     str <- c()
     i <- 1
     for (subject in subjects) {
