@@ -28,7 +28,14 @@ loadData <- function() {
 
 function(input, output, session) {
   
-  #subid
+  # grab list of subjects
+  observe({
+    idpath <- paste(PROJECTDIR, "/subjects/subjectids", sep="")
+    idlist <- readLines(file(idpath))
+    updateSelectInput(session, "subid", choices = idlist)
+  })
+  
+  # subid
   subject <- reactive({ input$subid })
   output$subject <- renderText({ input$subid })
   output$subviewtext <- renderText({ paste("You are now viewing subject ", 
@@ -110,9 +117,10 @@ function(input, output, session) {
   output$motionmetrics <- renderUI({
     outlier_volumes_e002_file_path <- paste("/mnt/panuc/udallp2/subjects/", input$subid, "/", input$sessionid,
                                             "/", input$taskid, "/", input$taskid, "_e002_outliers_volumes.txt", sep="")
-    conn <- file(outlier_file_path)
+    conn <- file(outlier_volumes_e002_file_path)
     outlier_volumes_e002 <- readLines(conn)
     on.exit(close(conn))
+    
     #read fd outliers
     fd_e002_spikes_file_path <- paste("/mnt/panuc/udallp2/subjects/", input$subid, "/", input$sessionid,
                                             "/", input$taskid, "/", input$taskid, "_e002_fd_spike_vols", sep="")
@@ -129,6 +137,7 @@ function(input, output, session) {
     conn <- file(fd_medn_spikes_file_path)
     fd_medn_spikes <- readLines(conn)
     on.exit(close(conn))
+    
     # read dvars outliers
     dvars_e002_spikes_file_path <- paste("/mnt/panuc/udallp2/subjects/", input$subid, "/", input$sessionid,
                                       "/", input$taskid, "/", input$taskid, "_e002_dvars_spike_vols", sep="")
