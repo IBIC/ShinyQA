@@ -27,6 +27,7 @@ CURRDIR=$SUBJECTDIR/$SUBID/session$SESSION
 GROUP=`cat $CURRDIR/0_group`
 OUTPUTFILE=$CURRDIR/QA/${SUBID}_QA_stats.csv
 
+# note: missing files are automatically flagged
 # the cutoff points for when measures are flagged
 skullstrip_cutoff=0.9			# skullstripDICE < cutoff gets flagged
 reg_warn_cutoff=0.75			# regDICE < cutoff gets flagged
@@ -140,59 +141,138 @@ fi
 for TASK in "${tasks[@]}"
 do (
 	# flag registration DICE coefficients
-	regDICE=`grep 'value="' $CURRDIR/$TASK/${TASK}_regDICE | awk '{print $7}' | grep -o '[0-9].[0-9]*'`
-	echo -n "${TASK}_regDICE,$regDICE," >> $OUTPUTFILE
-	echo $regDICE'<'$reg_warn_cutoff | bc -l >> $OUTPUTFILE
+	if [[ -f $CURRDIR/$TASK/${TASK}_regDICE ]]; then
+		regDICE=`grep 'value="' $CURRDIR/$TASK/${TASK}_regDICE | awk '{print $7}' | grep -o '[0-9].[0-9]*'`
+		echo -n "${TASK}_regDICE,$regDICE," >> $OUTPUTFILE
+		echo $regDICE'<'$reg_warn_cutoff | bc -l >> $OUTPUTFILE
+	else
+		echo "${TASK}_regDICE,NA,1" >> $OUTPUTFILE
+	fi
 	
 	# flag motion mean metrics
-	absdisp_mean=`cat $CURRDIR/mcflirt_data/${TASK}_data_abs_mean.rms`
-	echo -n "${TASK}_abs_mean_displacement,$absdisp_mean," >> $OUTPUTFILE
-	echo $absdisp_mean'>'$absdisp_cutoff | bc -l >> $OUTPUTFILE
-	reldisp_mean=`cat $CURRDIR/mcflirt_data/${TASK}_data_rel_mean.rms`
-	echo -n "${TASK}_rel_mean_displacement,$reldisp_mean," >> $OUTPUTFILE
-	echo $reldisp_mean'>'$reldisp_cutoff | bc -l >> $OUTPUTFILE
+	if [[ -f $CURRDIR/mcflirt_data/${TASK}_data_abs_mean.rms ]]; then
+		absdisp_mean=`cat $CURRDIR/mcflirt_data/${TASK}_data_abs_mean.rms`
+		echo -n "${TASK}_abs_mean_displacement,$absdisp_mean," >> $OUTPUTFILE
+		echo $absdisp_mean'>'$absdisp_cutoff | bc -l >> $OUTPUTFILE
+	else
+		echo "${TASK}_abs_mean_displacement,NA,1" >> $OUTPUTFILE
+	fi
+	if [[ -f $CURRDIR/mcflirt_data/${TASK}_data_rel_mean.rms ]]; then
+		reldisp_mean=`cat $CURRDIR/mcflirt_data/${TASK}_data_rel_mean.rms`
+		echo -n "${TASK}_rel_mean_displacement,$reldisp_mean," >> $OUTPUTFILE
+		echo $reldisp_mean'>'$reldisp_cutoff | bc -l >> $OUTPUTFILE
+	else
+		echo "${TASK}_rel_mean_displacement,NA,1" >> $OUTPUTFILE
+	fi
 
 	# flag outliers
-	total_outliers=`cat $CURRDIR/$TASK/${TASK}_e002_outliers_volumes.txt | wc -l`
-	num_vols=`fslval $CURRDIR/mcflirt_data/${TASK}_data.nii.gz dim4` 
-	num_vols=`echo $num_vols | xargs`
-	percent_outliers=`bc <<< "scale = 10; (( 100*$total_outliers/$num_vols ))"`
-	echo -n "${TASK}_total_outliers,$total_outliers," >> $OUTPUTFILE
-	echo $percent_outliers'>'$percent_outliers_cutoff | bc -l >> $OUTPUTFILE
-	echo -n "${TASK}_num_vols,$num_vols," >> $OUTPUTFILE
-	if [ "$num_vols" == "$num_vols_cutoff" ]; then
-		echo 0 >> $OUTPUTFILE
-	else
-		echo 1 >> $OUTPUTFILE
+	if [[ -f $CURRDIR/$TASK/${TASK}_e002_outliers_volumes.txt ]]; then
+		total_outliers=`cat $CURRDIR/$TASK/${TASK}_e002_outliers_volumes.txt | wc -l`
+		echo "${TASK}_total_outliers,$total_outliers,0" >> $OUTPUTFILE
+	else 
+		echo "${TASK}_total_outliers,NA,1" >> $OUTPUTFILE
 	fi
-	echo -ne "${TASK}_percent_outliers,$percent_outliers," >> $OUTPUTFILE
-	echo $percent_outliers'>'$percent_outliers_cutoff | bc -l >> $OUTPUTFILE
+	if [[ -f $CURRDIR/mcflirt_data/${TASK}_data.nii.gz ]]; then
+		num_vols=`fslval $CURRDIR/mcflirt_data/${TASK}_data.nii.gz dim4` 
+		num_vols=`echo $num_vols | xargs`
+		echo -n "${TASK}_num_vols,$num_vols," >> $OUTPUTFILE
+		if [ "$num_vols" == "$num_vols_cutoff" ]; then
+			echo 0 >> $OUTPUTFILE
+		else
+			echo 1 >> $OUTPUTFILE
+		fi
+	else
+		echo "${TASK}_num_vols,NA,1" >> $OUTPUTFILE
+	fi
+	if [[ -f $CURRDIR/$TASK/${TASK}_e002_outliers_volumes.txt ]] \
+			&& [[ -f $CURRDIR/mcflirt_data/${TASK}_data.nii.gz ]]; then
+		percent_outliers=`bc <<< "scale = 10; (( 100*$total_outliers/$num_vols ))"`
+		echo -ne "${TASK}_percent_outliers,$percent_outliers," >> $OUTPUTFILE
+		echo $percent_outliers'>'$percent_outliers_cutoff | bc -l >> $OUTPUTFILE
+	else 
+		echo "${TASK}_percent_outliers,NA,1" >> $OUTPUTFILE
+	fi
+	
 
 	# flag fdvals means
-	fdvals_e002_mean=`awk '{ s+=$1 } END {print s/NR}' RS="\n" $CURRDIR/$TASK/${TASK}_e002_fd_vals`	
-	fdvals_tsoc_mean=`awk '{ s+=$1 } END {print s/NR}' RS="\n" $CURRDIR/$TASK/${TASK}_e00213_tsoc_fd_vals`	
-	fdvals_medn_mean=`awk '{ s+=$1 } END {print s/NR}' RS="\n" $CURRDIR/$TASK/${TASK}_e00213_medn_fd_vals`	
-	echo -n "${TASK}_fdvals_e002_mean,$fdvals_e002_mean," >> $OUTPUTFILE
-	echo $fdvals_e002_mean'>'$fdvals_cutoff | bc -l >> $OUTPUTFILE
-	echo -n "${TASK}_fdvals_tsoc_mean,$fdvals_tsoc_mean," >> $OUTPUTFILE
-	echo $fdvals_tsoc_mean'>'$fdvals_cutoff | bc -l >> $OUTPUTFILE
-	echo -n "${TASK}_fdvals_medn_mean,$fdvals_medn_mean," >> $OUTPUTFILE
-	echo $fdvals_medn_mean'>'$fdvals_cutoff | bc -l >> $OUTPUTFILE
+	if [[ -f $CURRDIR/$TASK/${TASK}_e002_fd_vals ]]; then
+		fdvals_e002_mean=`awk '{ s+=$1 } END {print s/NR}' RS="\n" $CURRDIR/$TASK/${TASK}_e002_fd_vals`	
+		echo -n "${TASK}_fdvals_e002_mean,$fdvals_e002_mean," >> $OUTPUTFILE
+		echo $fdvals_e002_mean'>'$fdvals_cutoff | bc -l >> $OUTPUTFILE
+	else
+		echo "${TASK}_fdvals_e002_mean,NA,1" >> $OUTPUTFILE
+	fi
+	if [[ -f $CURRDIR/$TASK/${TASK}_e00213_tsoc_fd_vals ]]; then
+		fdvals_tsoc_mean=`awk '{ s+=$1 } END {print s/NR}' RS="\n" $CURRDIR/$TASK/${TASK}_e00213_tsoc_fd_vals`	
+		echo -n "${TASK}_fdvals_tsoc_mean,$fdvals_tsoc_mean," >> $OUTPUTFILE
+		echo $fdvals_tsoc_mean'>'$fdvals_cutoff | bc -l >> $OUTPUTFILE
+	else
+		echo "${TASK}_fdvals_tsoc_mean,NA,1" >> $OUTPUTFILE
+	fi
+	if [[ -f $CURRDIR/$TASK/${TASK}_e00213_medn_fd_vals ]]; then
+		fdvals_medn_mean=`awk '{ s+=$1 } END {print s/NR}' RS="\n" $CURRDIR/$TASK/${TASK}_e00213_medn_fd_vals`	
+		echo -n "${TASK}_fdvals_medn_mean,$fdvals_medn_mean," >> $OUTPUTFILE
+		echo $fdvals_medn_mean'>'$fdvals_cutoff | bc -l >> $OUTPUTFILE
+	else
+		echo "${TASK}_fdvals_medn_mean,NA,1" >> $OUTPUTFILE
+	fi
 
-	# flag dvars means	
-	dvarsvals_e002_mean=`awk '{ total += $1; count++ } END {print total/count}' $CURRDIR/$TASK/${TASK}_e002_dvars_vals`	
-	dvarsvals_tsoc_mean=`awk '{ total += $1; count++ } END {print total/count}' $CURRDIR/$TASK/${TASK}_e00213_tsoc_dvars_vals`	
-	dvarsvals_medn_mean=`awk '{ total += $1; count++ } END {print total/count}' $CURRDIR/$TASK/${TASK}_e00213_medn_dvars_vals`
-	dvarsvals_e002_thresh=`cat $CURRDIR/$TASK/${TASK}_e002_dvars_thresh`	
-	dvarsvals_tsoc_thresh=`cat $CURRDIR/$TASK/${TASK}_e00213_tsoc_dvars_thresh`
-	dvarsvals_medn_thresh=`cat $CURRDIR/$TASK/${TASK}_e00213_medn_dvars_thresh`
-	echo -n "${TASK}_dvarsvals_e002_mean,$dvarsvals_e002_mean," >> $OUTPUTFILE
-	echo $dvarsvals_e002_mean'>'$dvarsvals_e002_thresh | bc -l >> $OUTPUTFILE
-	echo -n "${TASK}_dvarsvals_tsoc_mean,$dvarsvals_tsoc_mean," >> $OUTPUTFILE
-	echo $dvarsvals_tsoc_mean'>'$dvarsvals_tsoc_thresh | bc -l >> $OUTPUTFILE
-	echo -n "${TASK}_dvarsvals_medn_mean,$dvarsvals_medn_mean," >> $OUTPUTFILE
-	echo $dvarsvals_medn_mean'>'$dvarsvals_medn_thresh | bc -l >> $OUTPUTFILE
-	echo "${TASK}_dvarsvals_e002_thresh,$dvarsvals_e002_thresh,0" >> $OUTPUTFILE
-	echo "${TASK}_dvarsvals_tsoc_thresh,$dvarsvals_tsoc_thresh,0" >> $OUTPUTFILE
-	echo "${TASK}_dvarsvals_medn_thresh,$dvarsvals_medn_thresh,0" >> $OUTPUTFILE
+	# flag dvars means
+	thresh_exists=1
+	if [[ -f $CURRDIR/$TASK/${TASK}_e002_dvars_thresh ]]; then
+		dvarsvals_e002_thresh=`cat $CURRDIR/$TASK/${TASK}_e002_dvars_thresh`
+		echo "${TASK}_dvarsvals_e002_thresh,$dvarsvals_e002_thresh,0" >> $OUTPUTFILE
+	else
+		echo "${TASK}_dvarsvals_e002_thresh,NA,1" >> $OUTPUTFILE
+		thresh_exists=0
+	fi
+	if [[ -f $CURRDIR/$TASK/${TASK}_e002_dvars_vals ]]; then 
+		dvarsvals_e002_mean=`awk '{ total += $1; count++ } END {print total/count}' $CURRDIR/$TASK/${TASK}_e002_dvars_vals`	
+		echo -n "${TASK}_dvarsvals_e002_mean,$dvarsvals_e002_mean," >> $OUTPUTFILE
+		if [[ $thresh_exists -eq 1 ]]; then
+			echo $dvarsvals_e002_mean'>'$dvarsvals_e002_thresh | bc -l >> $OUTPUTFILE
+		else
+			echo 1 >> $OUTPUTFILE
+		fi
+	else
+		echo "${TASK}_dvarsvals_e002_mean,NA,1" >> $OUTPUTFILE
+	fi
+	thresh_exists=1
+	if [[ -f $CURRDIR/$TASK/${TASK}_e00213_tsoc_dvars_thresh ]]; then
+		dvarsvals_tsoc_thresh=`cat $CURRDIR/$TASK/${TASK}_e00213_tsoc_dvars_thresh`
+		echo "${TASK}_dvarsvals_tsoc_thresh,$dvarsvals_tsoc_thresh,0" >> $OUTPUTFILE
+	else
+		echo "${TASK}_dvarsvals_tsoc_thresh,NA,1" >> $OUTPUTFILE
+		thresh_exists=0
+	fi
+	if [[ -f $CURRDIR/$TASK/${TASK}_e00213_tsoc_dvars_vals ]]; then 
+		dvarsvals_tsoc_mean=`awk '{ total += $1; count++ } END {print total/count}' $CURRDIR/$TASK/${TASK}_e00213_tsoc_dvars_vals`	
+		echo -n "${TASK}_dvarsvals_tsoc_mean,$dvarsvals_tsoc_mean," >> $OUTPUTFILE
+		if [[ $thresh_exists -eq 1 ]]; then
+			echo $dvarsvals_tsoc_mean'>'$dvarsvals_tsoc_thresh | bc -l >> $OUTPUTFILE
+		else
+			echo 1 >> $OUTPUTFILE
+		fi
+	else
+		echo "${TASK}_dvarsvals_tsoc_mean,NA,1" >> $OUTPUTFILE
+	fi
+	thresh_exists=1
+	if [[ -f $CURRDIR/$TASK/${TASK}_e00213_medn_dvars_thresh ]]; then
+		dvarsvals_medn_thresh=`cat $CURRDIR/$TASK/${TASK}_e00213_medn_dvars_thresh`
+		echo "${TASK}_dvarsvals_medn_thresh,$dvarsvals_medn_thresh,0" >> $OUTPUTFILE
+	else
+		echo "${TASK}_dvarsvals_medn_thresh,NA,1" >> $OUTPUTFILE
+		thresh_exists=0
+	fi
+	if [[ -f $CURRDIR/$TASK/${TASK}_e00213_medn_dvars_vals ]]; then 
+		dvarsvals_medn_mean=`awk '{ total += $1; count++ } END {print total/count}' $CURRDIR/$TASK/${TASK}_e00213_medn_dvars_vals`
+		echo -n "${TASK}_dvarsvals_medn_mean,$dvarsvals_medn_mean," >> $OUTPUTFILE
+		if [[ $thresh_exists -eq 1 ]]; then
+			echo $dvarsvals_medn_mean'>'$dvarsvals_medn_thresh | bc -l >> $OUTPUTFILE
+		else
+			echo 1 >> $OUTPUTFILE
+		fi
+	else
+		echo "${TASK}_dvarsvals_medn_mean,NA,1" >> $OUTPUTFILE
+	fi
 ) done
