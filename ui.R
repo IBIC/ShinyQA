@@ -127,7 +127,7 @@ shinyUI(fluidPage(
                  br(),
                  div(em("These subjects have been flagged for the following parameters. Pay special attention to them.", style = "color:red")),
                  br(),
-                 uiOutput("most_warnings"))
+                 uiOutput("all_warnings"))
         )
       )
     )
